@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primary-color: #ed3238;
+  --secondary-color: #383536;
+  --shapes-color: #383536;
+  --light: #ffffff;
+  --dark: #000000;
+  --additional-color: #9c466c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background-color: #e6e3df;
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #ff0606;
+  --sb-size: 12px;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar customize */
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: #e6e3df;
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Why Choose */
+.why-choose {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.7)),
+    url("./assets/home/bg-image.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100dvh;
+}
+
+.second-type {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.7)),
+    url("./assets/home/female-business-owner-working.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+.second-type-next {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.7)),
+    url("./assets/home/machine-with-cloth-that-says-tweak-it.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
