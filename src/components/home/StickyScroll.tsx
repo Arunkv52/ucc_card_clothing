@@ -7,20 +7,8 @@ import Product3 from '../../assets/home/Products/Prod-3A.png'
 import Product4 from '../../assets/home/Products/Prod-4A-.png'
 import Product5 from '../../assets/home/Products/prod-5A-.png'
 import Product6 from '../../assets/home/Products/Prod-6A-.png'
-import SoftAurora from '../SoftAurora'
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.6,
-      ease: 'easeOut'
-    }
-  })
-}
+
 
 const StickyScroll = () => {
   const sectionRef = useRef(null)
@@ -55,24 +43,7 @@ const StickyScroll = () => {
       className='relative min-h-screen px-3 py-20 overflow-hidden'
     >
       {/* ✅ Fix 2: SoftAurora as absolute background layer */}
-      {/* <div className='absolute inset-0 z-0 pointer-events-none'>
-        <SoftAurora
-          speed={0.6}
-          scale={2.1}
-          brightness={1}
-          color1='#f7f7f7'
-          color2='#e100ff'
-          noiseFrequency={2.5}
-          noiseAmplitude={1}
-          bandHeight={0.25}
-          bandSpread={1}
-          octaveDecay={0.1}
-          layerOffset={0}
-          colorSpeed={1}
-          enableMouseInteraction
-          mouseInfluence={0.25}
-        />
-      </div> */}
+  
 
       {/* Content above aurora */}
       <div className='relative z-10 md:flex md:items-start md:justify-between md:gap-20'>
@@ -97,7 +68,6 @@ const StickyScroll = () => {
                 key={index}
                 className='card'
                 custom={index}
-                variants={fadeUp}
                 initial='hidden'
                 whileInView='visible'
                 viewport={{ once: true, amount: 0.2 }}
