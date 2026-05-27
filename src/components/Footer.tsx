@@ -3,7 +3,7 @@ import SocialLinks from '../data/SocialLinks'
 import Noise from './Noise'
 import MotionAnim from './ShapeCards'
 import AnimatedShape from './AnimatedShape'
-import Logo from '../assets/logo/logo.png'
+import Logo from '../assets/logo/Logo.jpeg'
 
 
 const Footer = () => {

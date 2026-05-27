@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
-import Logo from '../assets/logo/logo.png'
+import Logo from '../assets/logo/Logo.jpeg'
 import Button from '../components/Button'
 
 const Navbar = () => {
