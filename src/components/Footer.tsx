@@ -68,7 +68,7 @@ const Footer = () => {
               <div>
                 <p className='mb-3 text-red-300 md:text-sm text-base'>Our Solutions</p>
               </div>
-              <div className='bg-red-700 max-w-fit p-1 rounded-lg'>
+              <div className='bg-[#ed3238] max-w-fit p-1 rounded-lg'>
                 <MotionAnim />
               </div>
               <div className='py-4 md:text-sm text-base text-white'>

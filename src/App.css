@@ -59,7 +59,18 @@ footer {
   width: 100%;
   height: 100dvh;
 }
-
+@media (max-width:768px) {
+  .why-choose {
+  background:
+    linear-gradient(rgba(255, 10, 10, 0.74), rgba(0, 0, 0, 0.7)),
+    url("./assets/home/bg-image.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+}
 .second-type {
   background:
     linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.7)),

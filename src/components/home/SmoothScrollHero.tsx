@@ -7,10 +7,10 @@ import {
 
 import { useRef } from "react";
 
-import Product1 from '../assets/home/Products/prod-1.png'
-import Product2 from '../assets/home/Products/prod-1.png'
-import Product3 from '../assets/home/Products/bg-img.jpg'
-import Product4 from '../assets/home/Products/prod-9.jpg'
+import Product1 from '../../assets/home/Products/prod-1.png'
+import Product2 from '../../assets/home/Products/prod-1.png'
+import Product3 from '../../assets/home/Products/bg-img.jpg'
+import Product4 from '../../assets/home/Products/prod-9.jpg'
 
 
 

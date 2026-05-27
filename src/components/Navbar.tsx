@@ -84,7 +84,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Menu */}
-            <div className='hidden md:flex justify-start gap-5 text-md font-medium bg-white md:py-2 md:px-5'>
+            <div className='hidden md:flex justify-start gap-5 text-md font-medium bg-white/65 md:py-2 md:px-5'>
               {MenuItems.map(item => (
                 <div key={item.title} className='relative group'>
                   {/* Normal Menu */}

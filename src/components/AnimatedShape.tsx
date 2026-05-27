@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function AnimatedShape() {
   return (
-    <div className="relative w-full h-[57%] bg-[#0042db94] overflow-hidden">
+    <div className="relative w-full h-[57%] bg-[#ed3238] overflow-hidden">
       <svg
         className="absolute inset-0 w-full h-full"
         viewBox="0 0 1000 700"
