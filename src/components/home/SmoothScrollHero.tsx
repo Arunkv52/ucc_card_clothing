@@ -77,7 +77,7 @@ const CenterImage = () => {
         backgroundSize,
         opacity,
         backgroundImage:
-          `url(${Product4})`,
+          `url(${Product3})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
@@ -97,7 +97,7 @@ const ParallaxImages = () => {
       />
 
       <ParallaxImg
-        src={Product3}
+        src={Product4}
         alt="Rocket"
         start={200}
         end={-250}
