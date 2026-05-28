@@ -5,6 +5,7 @@ import Button from '@/components/Button'
 import StickyScroll from '@/components/home/StickyScroll'
 import WhyChoose from '@/components/home/WhyChoose'
 import ExplainProd from '@/components/home/ExplainProd'
+import DealerList from '@/components/home/DealerList'
 
 const Home = () => {
   return (
@@ -52,6 +53,11 @@ const Home = () => {
       {/* Grid Section */}
       <section className='bg-black'>
         <ExplainProd />
+      </section>
+
+      {/* Dealers List */}
+      <section>
+        <DealerList />
       </section>
 
       {/* Contact */}
