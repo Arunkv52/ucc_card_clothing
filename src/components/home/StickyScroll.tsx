@@ -38,10 +38,10 @@ const StickyScroll = () => {
   return (
     // ✅ Fix 3: added relative + overflow-hidden
     <motion.section
-      ref={sectionRef}
-      style={{ backgroundImage, backgroundSize: '200% 200%' }}
-      className='relative min-h-screen px-3 py-20 overflow-hidden'
-    >
+  ref={sectionRef}
+  style={{ backgroundImage, backgroundSize: '200% 200%' }}
+  className='relative min-h-screen px-3 py-20'
+>
       {/* ✅ Fix 2: SoftAurora as absolute background layer */}
   
 

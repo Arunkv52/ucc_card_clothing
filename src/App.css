@@ -17,7 +17,7 @@ body {
   background-color: #e6e3df;
   --sb-track-color: #232e33;
   --sb-thumb-color: #ff0606;
-  --sb-size: 12px;
+  --sb-size: 8px;
   scroll-behavior: smooth;
 }
 

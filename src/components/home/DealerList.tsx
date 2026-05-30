@@ -239,7 +239,7 @@ const Dealers = () => {
             <div className='sticky top-24'>
               <h2 className='text-5xl font-bold'>Dealer List's</h2>
 
-              <p className='text-red-500 border-b border-black py-3 mt-3'>
+              <p className='text-[#209e51] border-b border-black py-3 mt-3'>
                 Cities
               </p>
 
@@ -278,7 +278,7 @@ const Dealers = () => {
                   <div className='absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-red-500/80 via-orange-400/30 to-transparent rounded-full blur-2xl'></div>
 
                   <div className='relative z-10'>
-                    <h2 className='text-2xl font-bold text-red-600'>
+                    <h2 className='text-2xl font-bold text-[#209e51]'>
                       {item.title}
                     </h2>
 

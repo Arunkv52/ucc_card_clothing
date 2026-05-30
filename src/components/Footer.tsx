@@ -2,7 +2,7 @@ import MenuItems from '../data/TopMenu'
 import SocialLinks from '../data/SocialLinks'
 import Noise from './Noise'
 import AnimatedShape from './AnimatedShape'
-import Logo from '../assets/logo/Logo.jpeg'
+import Logo from '../assets/logo/Logo.png'
 
 
 const Footer = () => {

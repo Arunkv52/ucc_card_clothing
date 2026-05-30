@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
-import Logo from '../assets/logo/Logo.jpeg'
+import Logo from '../assets/logo/Logo.png'
 import Button from '../components/Button'
 
 const Navbar = () => {
@@ -77,7 +77,7 @@ const Navbar = () => {
     <>
       <nav className='w-full fixed top-0 left-0 z-50 px-4 md:px-3 py-4'>
         <div className='px-0 py-0 flex items-center justify-between'>
-          <div className='md:flex justify-start items-center gap-10'>
+          <div className='md:flex justify-start items-center gap-5'>
             {/* Logo */}
             <div className=''>
               <img src={Logo} alt='logo' className='w-18' />

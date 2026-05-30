@@ -41,7 +41,7 @@ const Hero = () => {
         showBorder={false}
         className='custom-class'
       >
-        <h1 className='text-8xl'>Reliable carding solutions</h1>
+        <h1 className='text-7xl font-light'>Reliable carding solutions</h1>
       </GradientText>
       <ParallaxImages />
      

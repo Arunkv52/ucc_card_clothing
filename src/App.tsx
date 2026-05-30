@@ -1,12 +1,10 @@
 import './App.css'
-import Home from './pages/Home'
+import RoutePath from './routes/Navigation'
 
 const App = () => {
   return (
     <>
-      <div>
-       <Home />
-      </div>
+      <RoutePath />
     </>
   )
 }
