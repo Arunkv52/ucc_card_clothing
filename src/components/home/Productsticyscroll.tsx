@@ -1,4 +1,3 @@
-import Product1 from '../../assets/home/Products/Prod-3.png'
 import CottonCard from '../../assets/home/Photoshoot/Banner-4.png'
 import MetalicImg from '../../assets/home/Products/metalic.png'
 import FlattopImg from '../../assets/home/Products/Flat-tops.png'

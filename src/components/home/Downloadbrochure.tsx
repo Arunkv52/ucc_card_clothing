@@ -1,21 +1,20 @@
-import { FaChevronDown } from 'react-icons/fa'
-import { useState } from 'react'
+
 
 const Downloadbrochure = () => {
-  const pdfs = [
-    {
-      name: 'Rising Fillets',
-      file: '/pdfs/product-catalog.pdf'
-    },
-    {
-      name: 'NonWovens',
-      file: '/pdfs/technical-data-sheet.pdf'
-    },
-    {
-      name: 'OE Combing Roller Wire',
-      file: '/pdfs/safety-information.pdf'
-    }
-  ]
+  // const pdfs = [
+  //   {
+  //     name: 'Rising Fillets',
+  //     file: '/pdfs/product-catalog.pdf'
+  //   },
+  //   {
+  //     name: 'NonWovens',
+  //     file: '/pdfs/technical-data-sheet.pdf'
+  //   },
+  //   {
+  //     name: 'OE Combing Roller Wire',
+  //     file: '/pdfs/safety-information.pdf'
+  //   }
+  // ]
   return (
     <>
       <div className='md:flex md:gap-20 md:px-10 md:py-30 py-20 px-3 download-bg relative overflow-hidden '>
