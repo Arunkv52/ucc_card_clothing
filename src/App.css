@@ -14,9 +14,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  background-color: #e6e3df;
+  background-color: #ffffff;
   --sb-track-color: #232e33;
-  --sb-thumb-color: #ff0606;
+  --sb-thumb-color: #f59044;
   --sb-size: 8px;
   scroll-behavior: smooth;
 }
@@ -27,7 +27,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #e6e3df;
+  background: #ffffff;
   border-radius: 8px;
 }
 
@@ -59,17 +59,17 @@ footer {
   width: 100%;
   height: 100dvh;
 }
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .why-choose {
-  background:
-    linear-gradient(rgba(255, 10, 10, 0.74), rgba(0, 0, 0, 0.7)),
-    url("./assets/home/bg-image.webp");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 600px;
-}
+    background:
+      linear-gradient(rgba(255, 10, 10, 0.74), rgba(0, 0, 0, 0.7)),
+      url("./assets/home/bg-image.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+  }
 }
 .second-type {
   background:
@@ -92,4 +92,81 @@ footer {
   width: 100%;
   height: 500px;
   border-radius: 10px;
+}
+.Card-header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.7)),
+    url("./assets/home/machine-with-cloth-that-says-tweak-it.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+/* Header Section */
+header {
+  background: url(./assets/home/Photoshoot/Banner-1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100dvh;
+}
+.abt-left {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.163), rgba(0, 0, 0, 0)),
+    url("./assets/home/Photoshoot/Banner-5.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100dvh;
+}
+.abt-right {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.163), rgba(0, 0, 0, 0)),
+    url("./assets/home/Photoshoot/Banner-6.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100dvh;
+}
+
+/* Download Brochure */
+.download-bg {
+  background:
+    linear-gradient(rgba(3, 9, 30, 0.819), rgba(0, 0, 0, 0)),
+    url("./assets/home/Photoshoot/Banner-3.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100dvh;
+}
+
+/* Home page mobile responsive */
+@media (max-width: 768px) {
+  .abt-left {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.819), rgba(0, 0, 0, 0)),
+      url("./assets/home/Photoshoot/Banner-5.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+  .abt-right {
+    background:
+      linear-gradient(rgba(3, 9, 30, 0.819), rgba(0, 0, 0, 0)),
+      url("./assets/home/Photoshoot/Banner-6.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
 }

@@ -1,114 +1,102 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
+// Replace with your actual logo import
 import Logo from '../assets/logo/Logo.png'
-import Button from '../components/Button'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [productOpen, setProductOpen] = useState(false)
 
   const MenuItems = [
-    {
-      title: 'Home',
-      link: '/'
-    },
-    {
-      title: 'About us',
-      link: '/about'
-    },
+    { title: 'Home', link: '/' },
+    { title: 'About us', link: '/about' },
     {
       title: 'Products',
       submenu: [
         {
           title: 'Cotton Series Card Clothing',
-          link: '/products/coffee-dryer'
+          link: '/cotton-series-clothing'
         },
-        {
-          title: 'Metallic Wires',
-          link: '/products/paddy-dryer'
-        },
-        {
-          title: 'Flat Tops',
-          link: '/products/spices-dryer'
-        },
-        {
-          title: 'Stationary Flat Tops',
-          link: '/products/coffee-dryer'
-        },
-        {
-          title: 'Card Conversion C-System',
-          link: '/products/paddy-dryer'
-        },
-        {
-          title: 'Fillets &amp; Accessories',
-          link: '/products/spices-dryer'
-        },
-        {
-          title: 'OE Combing Roller',
-          link: '/products/coffee-dryer'
-        },
-        {
-          title: 'Raising Fillet',
-          link: '/products/paddy-dryer'
-        },
-        {
-          title: 'Nonwoven Metalic Wires',
-          link: '/products/spices-dryer'
-        }
+        { title: 'Metallic Wires', link: '/metallic-wires' },
+        { title: 'Flat Tops', link: '/flat-tops' },
+        { title: 'Stationary Flat Tops', link: '/stationary-flat-tops' },
+        { title: 'Card Conversion C-System', link: '/card-conversion' },
+        { title: 'Fillets & Accessories', link: '/fillets-accessories' },
+        { title: 'OE Combing Roller', link: '/oe-combing-roller' },
+        { title: 'Raising Fillet', link: '/raising-fillet' },
+        { title: 'Nonwoven Metallic Wires', link: '/nonwoven-metallic-wires' }
       ]
     },
     {
       title: 'Services',
-      link: '/services'
+      submenu: [ {
+        title : 'Schedule Maintenance',
+        link: '/'
+      },
+      {
+        title : 'Recommendation Chart',
+        link: '/'
+      },
+      {
+        title : 'Safety First',
+        link: '/'
+      }
+    
+    ]
     },
-    {
-      title: 'Gallery',
-      link: '/gallery'
-    },
-
-    {
-      title: 'Contact',
-      link: '/contact'
-    }
+    { title: 'Seller Agents', link: '/selleragents' },
+    { title: 'Gallery', link: '/gallery' }
   ]
 
   return (
     <>
-      <nav className='w-full fixed top-0 left-0 z-50 px-4 md:px-3 py-4'>
-        <div className='px-0 py-0 flex items-center justify-between'>
-          <div className='md:flex justify-start items-center gap-5'>
-            {/* Logo */}
-            <div className=''>
-              <img src={Logo} alt='logo' className='w-18' />
-            </div>
+      {/* Spacer so content doesn't hide behind fixed navbar */}
+      <div className='h-[72px] hidden md:block' />
 
-            {/* Desktop Menu */}
-            <div className='hidden md:flex justify-start gap-5 text-md font-medium bg-white/65 md:py-2 md:px-5'>
+      <nav className='w-full fixed top-0 left-0 z-50 '>
+        <div className='max-w-full mx-auto px-5 md:px-6 lg:px-8'>
+          <div className='flex items-center justify-between h-[72px]'>
+            {/* ── Logo ── */}
+            <a href='/' className='flex-shrink-0'>
+              {Logo ? (
+                <img src={Logo} alt='logo' className='h-15 w-auto' />
+              ) : (
+                <span className='text-xl font-bold text-[#e67f33] tracking-tight'>
+                  BRAND
+                </span>
+              )}
+            </a>
+
+            {/* ── Desktop Nav ── */}
+            <div className='hidden lg:flex items-center gap-1'>
               {MenuItems.map(item => (
                 <div key={item.title} className='relative group'>
-                  {/* Normal Menu */}
                   {!item.submenu ? (
                     <a
                       href={item.link}
-                      className='hover:text-red-600 transition-all duration-300'
+                      className='px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200'
                     >
                       {item.title}
                     </a>
                   ) : (
                     <>
-                      {/* Products Menu */}
-                      <div className='flex items-center gap-1 cursor-pointer hover:text-red-600 transition-all duration-300'>
-                        <p>{item.title}</p>
-                      </div>
+                      {/* Products trigger */}
+                      <button className='flex items-center gap-1 px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200 cursor-pointer'>
+                        {item.title}
+                        <ChevronDown
+                          size={14}
+                          className='mt-0.5 transition-transform duration-300 group-hover:rotate-180'
+                        />
+                      </button>
 
                       {/* Dropdown */}
-                      <div className='absolute top-10 left-0 bg-white shadow-xl rounded-xl min-w-[350px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-2'>
+                      <div className='absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-gray-100 shadow-xl rounded-xl w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top scale-95 group-hover:scale-100 p-1.5 z-50'>
                         {item.submenu.map(sub => (
                           <a
                             key={sub.title}
                             href={sub.link}
-                            className='block px-4 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300'
+                            className='flex items-center px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                           >
                             {sub.title}
                           </a>
@@ -118,81 +106,93 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
+
+              {/* CTA Button */}
+              <a
+                href='/contact'
+                className='ml-3 px-5 py-2 bg-[#e67f33] text-white text-sm font-semibold  hover:bg-red-700 active:scale-95 transition-all duration-200 shadow-sm'
+              >
+                Get Started
+              </a>
             </div>
-          </div>
 
-          {/* Desktop Button */}
-          <div className='hidden lg:block'>
-            <Button text='Get Started'/>
+            {/* ── Mobile Hamburger ── */}
+            <button
+              className='lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 bg-white py-3 px-5 transition-colors duration-200'
+              onClick={() => setMobileMenu(!mobileMenu)}
+              aria-label='Toggle menu'
+            >
+              {mobileMenu ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className='lg:hidden bg-white py-2 px-3 shadow-lg rounded-lg'
-            onClick={() => setMobileMenu(!mobileMenu)}
-          >
-            {mobileMenu ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* ── Mobile Menu ── */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 ${
-            mobileMenu ? 'max-h-[700px] mt-4' : 'max-h-0'
+          className={`lg:hidden border-t border-gray-100 overflow-hidden transition-all duration-400 ease-in-out ${
+            mobileMenu ? 'max-h-[85vh] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className='bg-[var(--light)] rounded-2xl shadow-lg p-5 flex flex-col gap-4'>
+          <div className='bg-white px-4 py-3 flex flex-col gap-1 overflow-y-auto max-h-[80vh]'>
             {MenuItems.map(item => (
               <div key={item.title}>
                 {!item.submenu ? (
                   <a
                     href={item.link}
-                    className='block py-2 border-b border-gray-100'
+                    onClick={() => setMobileMenu(false)}
+                    className='flex items-center px-3 py-3 rounded-lg text-sm font-medium text-gray-700 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                   >
                     {item.title}
                   </a>
                 ) : (
-                  <>
-                    {/* Mobile Products */}
+                  <div>
                     <button
                       onClick={() => setProductOpen(!productOpen)}
-                      className='w-full flex items-center justify-between py-2 border-b border-gray-100'
+                      className='w-full flex items-center justify-between px-3 py-3 rounded-lg text-sm font-medium text-gray-700 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                     >
                       <span>{item.title}</span>
                       <ChevronDown
-                        size={18}
-                        className={`transition-all duration-300 ${
-                          productOpen ? 'rotate-180' : ''
+                        size={16}
+                        className={`transition-transform duration-300 ${
+                          productOpen ? 'rotate-180 text-[#e67f33]' : ''
                         }`}
                       />
                     </button>
 
+                    {/* Mobile Submenu */}
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
-                        productOpen ? 'max-h-60 mt-2' : 'max-h-0'
+                        productOpen ? 'max-h-[500px] mt-1 mb-2' : 'max-h-0'
                       }`}
                     >
-                      <div className='pl-4 flex flex-col gap-2'>
+                      <div className='ml-3 pl-3 border-l-2 border-red-100 flex flex-col gap-0.5'>
                         {item.submenu.map(sub => (
                           <a
                             key={sub.title}
                             href={sub.link}
-                            className='py-2 text-sm text-gray-600'
+                            onClick={() => setMobileMenu(false)}
+                            className='px-3 py-2.5 rounded-lg text-sm text-gray-500 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                           >
                             {sub.title}
                           </a>
                         ))}
                       </div>
                     </div>
-                  </>
+                  </div>
                 )}
               </div>
             ))}
 
-            {/* Mobile Button */}
-            <button className='bg-[var(--primary-color)] text-white px-5 py-3 rounded-xl mt-3'>
-              Get Started
-            </button>
+            {/* Mobile CTA */}
+            <div className='pt-2 pb-1 border-t border-gray-100 mt-1'>
+              <a
+                href='/contact'
+                onClick={() => setMobileMenu(false)}
+                className='flex items-center justify-center w-full px-4 py-3 bg-red-600 text-white text-sm font-semibold rounded-xl hover:bg-red-700 active:scale-95 transition-all duration-200'
+              >
+                Get Started
+              </a>
+            </div>
           </div>
         </div>
       </nav>

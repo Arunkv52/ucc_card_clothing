@@ -1,5 +1,3 @@
-import HeroSection from '@/components/about/HeroSection'
-import OurHistory from '@/components/about/OurHistory'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
@@ -12,7 +10,13 @@ const About = () => {
           <HeroSection />
         </section>
         <section>
-          <OurHistory/>
+          <OurHistory />
+        </section>
+        <section>
+          <Infrastructure />
+        </section>
+        <section>
+          <Contactsection />
         </section>
         <Footer />
       </main>

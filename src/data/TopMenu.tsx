@@ -1,5 +1,5 @@
 const TopMenu = [
-    {
+     {
       title: 'Home',
       link: '/'
     },
@@ -11,15 +11,39 @@ const TopMenu = [
       title: 'Products',
       submenu: [
         {
-          title: 'Coffee Dryer',
+          title: 'Cotton Series Card Clothing',
+          link: '/cotton-series-clothing'
+        },
+        {
+          title: 'Metallic Wires',
+          link: '/metalic-wires'
+        },
+        {
+          title: 'Flat Tops',
+          link: '/products/spices-dryer'
+        },
+        {
+          title: 'Stationary Flat Tops',
           link: '/products/coffee-dryer'
         },
         {
-          title: 'Paddy Dryer',
+          title: 'Card Conversion C-System',
           link: '/products/paddy-dryer'
         },
         {
-          title: 'Spices Dryer',
+          title: 'Fillets &amp; Accessories',
+          link: '/products/spices-dryer'
+        },
+        {
+          title: 'OE Combing Roller',
+          link: '/products/coffee-dryer'
+        },
+        {
+          title: 'Raising Fillet',
+          link: '/products/paddy-dryer'
+        },
+        {
+          title: 'Nonwoven Metalic Wires',
           link: '/products/spices-dryer'
         }
       ]
@@ -32,10 +56,7 @@ const TopMenu = [
       title: 'Gallery',
       link: '/gallery'
     },
-    {
-      title: 'Blog',
-      link: '/blog'
-    },
+
     {
       title: 'Contact',
       link: '/contact'
