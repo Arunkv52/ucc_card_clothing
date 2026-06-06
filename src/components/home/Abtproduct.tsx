@@ -25,7 +25,7 @@ const Abtproduct = () => {
           <div className='md:w-1/2 w-full relative overflow-hidden '>
             <div className='abt-left'>
               <p className='bg-white max-w-fit py-2 px-5 shadow-lg uppercase text-sm tracking-wide'>
-                Cotton Series Card Clothing
+                Stationary Flat Tops
               </p>
               {/* Dark Overlay */}
               <div className='absolute inset-0'></div>
@@ -39,7 +39,7 @@ const Abtproduct = () => {
           <div className='md:w-1/2 w-full relative overflow-hidden '>
             <div className='abt-right'>
               <p className='bg-white max-w-fit py-2 px-5 shadow-lg uppercase text-sm tracking-wide'>
-                Cotton Series Card Clothing
+                Cylinder Wires
               </p>
               {/* Dark Overlay */}
               <div className='absolute inset-0'></div>

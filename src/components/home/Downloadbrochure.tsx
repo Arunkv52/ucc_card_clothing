@@ -30,7 +30,7 @@ const Downloadbrochure = () => {
         </div>
         {/* Right */}
         <div className='md:w-1/2 w-full relative'>
-          <div className='md:absolute md:bottom-20 right-0 absolute top-80'>
+          <div className='md:absolute right-0 absolute md:top-50 top-80'>
             <div className='py-5'>
               <p className='text-white md:text-4xl text-3xl leading-8 font-bold'>
                 Download <br /> Brochure

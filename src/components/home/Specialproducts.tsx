@@ -7,7 +7,7 @@ const Specialproducts = () => {
       <div className='spl-prod md:px-5 px-0 md:flex md:flex-row flex flex-col md:justify-between md:items-start gap-10'>
         <div className='md:w-[70%] w-full'>
           <p className='bg-[#d8d8d849] text-black text-xs max-w-fit px-3 py-2'>
-            Cotton Series Card Clothing
+            Innovation Driven Carding Solutions  
           </p>
           <h2 className='text-5xl py-10 font-bold'>
             Precision Engineered for <br />
