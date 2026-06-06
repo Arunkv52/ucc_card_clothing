@@ -1,5 +1,5 @@
 import SocialLinks from '@/data/SocialLinks'
-import Logo from '../assets/logo/Logo.png'
+import Logo from '@/assets/logo/Logo.png'
 
 const Footer = () => {
   return (

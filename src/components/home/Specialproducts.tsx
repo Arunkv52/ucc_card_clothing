@@ -28,7 +28,7 @@ const Specialproducts = () => {
 
         {/* Glass Lines */}
         <div className='absolute inset-0 pointer-events-none'>
-          <div className='absolute top-[92%] right-0 w-full h-16 bg-gradient-to-r from-transparent to-blue-500/80 '></div>
+          <div className='absolute top-[92%] right-0 w-full h-16 bg-linear-to-r from-transparent to-blue-500/80 '></div>
         </div>
       </div>
     </>
