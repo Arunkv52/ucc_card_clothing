@@ -11,7 +11,7 @@ const Contactpreview = () => {
         </div>
         <div className='bg-black text-white px-5 py-3 max-w-fit mt-8'>
           <button className='flex items-center gap-5'>
-            How it Works
+            Connect with us
             <FaChevronRight />
           </button>
         </div>

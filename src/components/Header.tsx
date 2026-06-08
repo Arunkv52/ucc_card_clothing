@@ -27,13 +27,7 @@ const Header = () => {
           Reliable <br /> Carding Solutions
         </h1>
 
-        <div className='bg-black text-white md:px-5 px-8 md:py-3 py-5 max-w-fit mt-8'>
-          <button className='flex items-center gap-5'>
-            How it Works
-            <FaChevronRight />
-          </button>
-        </div>
-
+        
         <div className='mt-20 md:w-1/2 w-full text-white border-t-2 border-l-2 border-gray-300 p-5 rounded-2xl'>
           <h6 className='md:text-base text-base'>
             Meet the emerging Indian brand in card clothing

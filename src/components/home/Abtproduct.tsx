@@ -16,7 +16,7 @@ const Abtproduct = () => {
               Stilo and Uno flat tops, Stilo stationary flat tops and fillets.
               Experience the accomplished sales and service team backed by
               regional selling agents. Products to cater medium, high & super
-              high production cards, priced competitively. Backed by 20 years of
+              high production cards, priced competitively. Backed by 24 years of
               manufacturing expertise.
             </p>
           </div>
@@ -25,7 +25,7 @@ const Abtproduct = () => {
           <div className='md:w-1/2 w-full relative overflow-hidden '>
             <div className='abt-left'>
               <p className='bg-white max-w-fit py-2 px-5 shadow-lg uppercase text-sm tracking-wide'>
-                Stationary Flat Tops
+                Flat Tops
               </p>
               {/* Dark Overlay */}
               <div className='absolute inset-0'></div>

@@ -1,6 +1,6 @@
 import CottonCard from '../../assets/home/Photoshoot/Banner-4.png'
-import MetalicImg from '../../assets/home/Products/metalic.png'
-import FlattopImg from '../../assets/home/Products/Flat-tops.png'
+import MetalicImg from '../../assets/home/Products/Metalic-wires.jpg'
+import FlattopImg from '../../assets/home/Photoshoot/pic3.jpeg'
 import StationaryImg from '../../assets/home/Products/Stationary-Flat-Tops.png'
 
 const Productsticyscroll = () => {
