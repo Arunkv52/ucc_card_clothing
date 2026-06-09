@@ -29,23 +29,22 @@ const Navbar = () => {
     },
     {
       title: 'Services',
-      submenu: [ {
-        title : 'Schedule Maintenance',
-        link: '/'
-      },
-      {
-        title : 'Recommendation Chart',
-        link: '/'
-      },
-      {
-        title : 'Safety First',
-        link: '/'
-      }
-    
-    ]
+      submenu: [
+        {
+          title: 'Schedule Maintenance',
+          link: '/'
+        },
+        {
+          title: 'Recommendation Chart',
+          link: '/'
+        },
+        {
+          title: 'Safety First',
+          link: '/'
+        }
+      ]
     },
-    { title: 'Seller Agents', link: '/selleragents' },
-    { title: 'Gallery', link: '/gallery' }
+    { title: 'Selling Agents', link: '/selleragents' }
   ]
 
   return (
@@ -74,14 +73,14 @@ const Navbar = () => {
                   {!item.submenu ? (
                     <a
                       href={item.link}
-                      className='px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200'
+                      className='px-3 py-2 rounded-md text-base font-medium text-black hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200'
                     >
                       {item.title}
                     </a>
                   ) : (
                     <>
                       {/* Products trigger */}
-                      <button className='flex items-center gap-1 px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200 cursor-pointer'>
+                      <button className='flex items-center gap-1 px-3 py-2 rounded-md text-base font-medium text-black hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200 cursor-pointer'>
                         {item.title}
                         <ChevronDown
                           size={14}
@@ -105,14 +104,6 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-
-              {/* CTA Button */}
-              <a
-                href='/contact'
-                className='ml-3 px-5 py-2 bg-[#e67f33] text-white text-sm font-semibold  hover:bg-red-700 active:scale-95 transition-all duration-200 shadow-sm'
-              >
-                Get Started
-              </a>
             </div>
 
             {/* ── Mobile Hamburger ── */}

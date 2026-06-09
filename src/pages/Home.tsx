@@ -20,10 +20,7 @@ const Home = () => {
       </section>
 
         {/* Intro */}
-      <section className='md:py-15 py-10 px-5'>
-        <Specialproducts />
-      </section>
-
+      
       
       {/* Download Brochure */}
       <section className='why-choose'>

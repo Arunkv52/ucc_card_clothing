@@ -107,7 +107,7 @@ footer {
 
 /* Header Section */
 header {
-  background: url(./assets/home/Photoshoot/Banner-1.png);
+  background: url(./assets/home/bg-hero.jpeg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,8 +138,8 @@ header {
 /* Download Brochure */
 .download-bg {
   background:
-    linear-gradient(rgba(3, 9, 30, 0.819), rgba(0, 0, 0, 0)),
-    url("./assets/home/Photoshoot/Banner-3.png");
+    linear-gradient(rgba(11, 15, 40, 0.586), rgba(0, 0, 0, 0)),
+    url("./assets/home/Photoshoot/Media.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
