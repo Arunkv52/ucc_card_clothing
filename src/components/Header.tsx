@@ -22,7 +22,7 @@ const Header = () => {
 
       {/* Content */}
       <div className='absolute top-1/3 left-5 z-10'>
-        <h1 className='md:text-7xl text-5xl text-black font-semibold md:leading-15 leading-12'>
+        <h1 className='md:text-4xl text-5xl text-black font-semibold md:leading-10 leading-12'>
           Reliable <br /> Carding Solutions
         </h1>
 

@@ -3,12 +3,12 @@ const Abtproduct = () => {
     <>
       <div className='md:px-5 px-0 py-10'>
         <div className='top-abt pb-10 md:flex flex md:flex-row flex-col md:justify-between gap-5'>
-          <div className="md:w-1/2 w-full">
+          <div className="md:w-[60%] w-full">
             <h1 className='md:text-3xl text-5xl font-bold'>
              <span className="text-black/50"> Welcome to</span>  Unispin Card Clothing India Pvt. Ltd.,
             </h1>
           </div>
-          <div className="md:w-1/2 w-full">
+          <div className="md:w-[40%] w-full">
             <p className="leading-5">
               Meet the emerging
               Indian brand in card clothing. Feel the performing products in
@@ -24,7 +24,7 @@ const Abtproduct = () => {
         <div className='abt-prod-all mt-5 md:flex flex md:flex-row flex-col justify-between items-start gap-10'>
           <div className='md:w-1/2 w-full relative overflow-hidden '>
             <div className='abt-left'>
-              <p className='bg-white max-w-fit py-2 px-5 shadow-lg uppercase text-sm tracking-wide'>
+              <p className='bg-[#20a353] text-white max-w-fit py-2 px-5 shadow-lg uppercase text-sm tracking-wide font-bold'>
                 Flat Tops
               </p>
               {/* Dark Overlay */}
@@ -38,7 +38,7 @@ const Abtproduct = () => {
           </div>
           <div className='md:w-1/2 w-full relative overflow-hidden '>
             <div className='abt-right'>
-              <p className='bg-white max-w-fit py-2 px-5 shadow-lg uppercase text-sm tracking-wide'>
+              <p className='bg-[#20a353] text-white font-bold max-w-fit py-2 px-5 shadow-lg uppercase text-sm tracking-wide'>
                 Cylinder Wires
               </p>
               {/* Dark Overlay */}

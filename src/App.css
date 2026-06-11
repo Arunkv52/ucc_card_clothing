@@ -108,7 +108,7 @@ footer {
 /* Header Section */
 header {
   background: url(./assets/home/bg-hero.jpeg);
-  background-position: center center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -127,7 +127,7 @@ header {
 .abt-right {
   background:
     linear-gradient(rgba(255, 255, 255, 0.163), rgba(0, 0, 0, 0)),
-    url("./assets/home/Photoshoot/Banner-6.png");
+    url("./assets/home/Photoshoot/Banner-4-new.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,8 +138,8 @@ header {
 /* Download Brochure */
 .download-bg {
   background:
-    linear-gradient(rgba(11, 15, 40, 0.586), rgba(0, 0, 0, 0)),
-    url("./assets/home/Photoshoot/Media.jpeg");
+    linear-gradient(rgba(11, 15, 40, 0.334), rgba(0, 0, 0, 0)),
+    url("./assets/home/Photoshoot/pic11.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,7 +162,7 @@ header {
   .abt-right {
     background:
       linear-gradient(rgba(3, 9, 30, 0.819), rgba(0, 0, 0, 0)),
-      url("./assets/home/Photoshoot/Banner-6.png");
+      url("./assets/home/Photoshoot/Banner-4-new.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

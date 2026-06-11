@@ -21,7 +21,7 @@ const Downloadbrochure = () => {
         {/* Left */}
         <div className='md:w-1/2 w-full'>
           <h6 className='md:text-4xl text-2xl font-light text-white leading-tight border-l border-t border-white rounded-2xl md:max-w-fit max-w-fit py-5 px-5'>
-            Precision Card Clothing Engineered for <br />
+            Precision Card Clothing Engineered for
             <span className='text-white font-semibold'>
               {' '}
               Modern Textile Performance
@@ -30,7 +30,7 @@ const Downloadbrochure = () => {
         </div>
         {/* Right */}
         <div className='md:w-1/2 w-full relative'>
-          <div className='md:absolute right-0 absolute md:top-50 top-80'>
+          <div className='md:absolute right-0 absolute md:top-35 top-80'>
             <div className='py-5'>
               <p className='text-white md:text-4xl text-3xl leading-8 font-bold'>
                 Download  Brochure

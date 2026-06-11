@@ -6,7 +6,7 @@ const Contactpreview = () => {
       <div className='md:px-10 px-5 md:py-30 py-20 relative overflow-hidden'>
         <div className='text-start text-black'>
           <h6 className='font-bold md:text-6xl text-5xl md:leading-15 leading-12'>
-            Ready to Transform Your <br /> Textile Performance?
+            Ready to Transform Your <br /> Carding Performance
           </h6>
         </div>
         <div className='bg-black text-white px-5 py-3 max-w-fit mt-8'>

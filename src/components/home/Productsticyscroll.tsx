@@ -1,35 +1,33 @@
 import CottonCard from '../../assets/home/Photoshoot/Banner-4.png'
 import MetalicImg from '../../assets/home/Products/Metalic-wires.jpg'
-import FlattopImg from '../../assets/home/Photoshoot/pic3.jpeg'
-import StationaryImg from '../../assets/home/Products/Stationary-Flat-Tops.png'
+import FlattopImg from '../../assets/home/Photoshoot/pic12.jpeg'
+import StationaryImg from '../../assets/home/Photoshoot/pic14.jpeg'
 
 const Productsticyscroll = () => {
   const Products = [
     {
       image: CottonCard,
       title: 'Cotton Series Card Clothing',
-      types: 'Unimax / Unistar Plus / Unistar',
-     
+      types: 'Unistar / Unistar Plus / Unimax'
     },
     {
       image: MetalicImg,
       title: 'Metallic Wires',
-      types: 'CYLINDER WIRES / DOFFER WIRES / INTERLOCKING LICKER-IN WIRES',
-     
+      types:
+        'Cylinder wires / Doffer wires / Grooved lickerin wires / Interlocking lickerin wires / stripper roller wires / Feed roller wires / Blow room beater saw tooth wires'
     },
     {
       image: FlattopImg,
       title: 'Flat Tops',
-      types: '',
-     
+      types: 'Flat Tops - For cotton, synthetics, acrylics and surgical cotton process',
+      types1: 'Flat Tops - Stilo series, Uno series, Uno S series and Uno G series'
     },
     {
       image: StationaryImg,
-      title: 'Stationary Flat Tops',
-      types: '',
-     
+      title: 'Stationary Flats Tops - Stilo Series',
+      types:
+        'Manufactured out of imported nano alloy steels. With modified tooth geometry suitable for latest generation carding machines'
     }
-   
   ]
 
   return (
@@ -37,7 +35,7 @@ const Productsticyscroll = () => {
       <div className='product-stickyscroll bg-black text-white md:py-20 pt-120 md:px-10 px-0'>
         <div className='heading'>
           <h3 className='text-4xl font-bold'>
-            Advanced Clothing for <br /> Every Fiber
+            Advanced Clothing for Every Fibre
           </h3>
         </div>
         <div className='sticky-products py-10'>
@@ -53,9 +51,14 @@ const Productsticyscroll = () => {
                       <h6 className='md:text-2xl text-base'>{item.title}</h6>
                     </div>
                     <div className='py-10'>
-                      <h3 className='md:text-2xl text-2xl text-[#e37f32] font-bold'>{item.types}</h3>
+                      <h3 className='md:text-2xl text-2xl text-[#e37f32] font-bold'>
+                        {item.types}
+                      </h3>
+                      <h3 className='md:text-2xl text-2xl text-[#e37f32] font-bold py-2'>
+                        {item.types1}
+                      </h3>
                     </div>
-                    <div className='py-10 text-base'>
+                    {/* <div className='py-10 text-base'>
                       <ul>
                         <li className='border-b border-white py-3'>
                           {item.list1}
@@ -67,7 +70,7 @@ const Productsticyscroll = () => {
                           {item.list3}
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
