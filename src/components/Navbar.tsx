@@ -32,15 +32,15 @@ const Navbar = () => {
       submenu: [
         {
           title: 'Schedule Maintenance',
-          link: '/'
+          link: '/schedule'
         },
         {
           title: 'Recommendation Chart',
-          link: '/'
+          link: '/recommendation'
         },
         {
           title: 'Safety First',
-          link: '/'
+          link: '/safety'
         }
       ]
     },
@@ -127,13 +127,13 @@ const Navbar = () => {
             {MenuItems.map(item => (
               <div key={item.title}>
                 {!item.submenu ? (
-                  <a
-                    href={item.link}
+                  <Link
+                    to={item.link}
                     onClick={() => setMobileMenu(false)}
                     className='flex items-center px-3 py-3 rounded-lg text-sm font-medium text-gray-700 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 ) : (
                   <div>
                     <button
@@ -157,14 +157,14 @@ const Navbar = () => {
                     >
                       <div className='ml-3 pl-3 border-l-2 border-red-100 flex flex-col gap-0.5'>
                         {item.submenu.map(sub => (
-                          <a
+                          <Link
                             key={sub.title}
-                            href={sub.link}
+                            to={sub.link}
                             onClick={() => setMobileMenu(false)}
                             className='px-3 py-2.5 rounded-lg text-sm text-gray-500 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                           >
                             {sub.title}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -175,13 +175,13 @@ const Navbar = () => {
 
             {/* Mobile CTA */}
             <div className='pt-2 pb-1 border-t border-gray-100 mt-1'>
-              <a
-                href='/contact'
+              <Link
+               to='/contact'
                 onClick={() => setMobileMenu(false)}
                 className='flex items-center justify-center w-full px-4 py-3 bg-red-600 text-white text-sm font-semibold rounded-xl hover:bg-red-700 active:scale-95 transition-all duration-200'
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
         </div>
