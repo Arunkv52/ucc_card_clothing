@@ -1,5 +1,22 @@
+type Table = {
+  title: string
+  headers: string[]
+  values: string[]
+}
+type ListItem = {
+  head?: string
+  list?: string
+  items?: string[]
+  table?: Table
+}
+type AboutSection = {
+  no: string
+  title: string
+  listitem: ListItem[]
+}
+
 const Aboutdata = () => {
-  const Prodabt = [
+  const Prodabt: AboutSection[] = [
     {
       no: '01',
       title: 'Reliable Carding Solutions',
@@ -146,109 +163,84 @@ const Aboutdata = () => {
     }
   ]
 
-return (
-  <div className='py-0 md:px-10 px-5 bg-[#0c1714] text-white'>
-    {Prodabt.map(item => (
-      <div
-        key={item.no}
-        className='grid grid-cols-1 md:grid-cols-2 gap-10 py-20 bg-[#0c1714] md:sticky top-10'
-      >
-        {/* Title */}
-        <div className='border-t border-gray-400 py-5'>
-          <h2 className='text-2xl font-medium'>
-            {item.title}
-          </h2>
-        </div>
-
-        {/* Content */}
-        <div className='border-t border-gray-400 py-5 text-base text-white/60'>
-
-          <div className='space-y-3'>
-
-            {item.listitem.map((section, index) => (
-              <div key={index}>
-
-                {/* Heading */}
-                {section.head && (
-                  <h4 className='text-white text-lg font-semibold mb-4'>
-                    {section.head}
-                  </h4>
-                )}
-
-                {/* Normal list */}
-                {section.list && (
-                  <ul className='list-disc pl-5'>
-                    <li>{section.list}</li>
-                  </ul>
-                )}
-
-                {/* Nested list */}
-                {section.items && (
-                  <ul className='list-disc pl-5 space-y-3'>
-                    {section.items.map((point, i) => (
-                      <li key={i}>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-                {/* Table */}
-                {section.table && (
-                  <div className='mt-6 overflow-x-auto rounded-md'>
-
-                    <div className='bg-[#353535] text-white text-center py-3 font-semibold'>
-                      {section.table.title}
-                    </div>
-
-                    <table className='w-full border-collapse'>
-
-                      <thead>
-                        <tr className='bg-[#686767] text-white'>
-                          {section.table.headers.map(
-                            (header, i) => (
-                              <th
-                                key={i}
-                                className='px-4 py-3 text-center'
-                              >
-                                {header}
-                              </th>
-                            )
-                          )}
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        <tr className='bg-[#686767] text-black'>
-                          {section.table.values.map(
-                            (value, i) => (
-                              <td
-                                key={i}
-                                className='px-4 py-3 text-center'
-                              >
-                                {value}
-                              </td>
-                            )
-                          )}
-                        </tr>
-                      </tbody>
-
-                    </table>
-                  </div>
-                )}
-
-              </div>
-            ))}
-
+  return (
+    <div className='py-0 md:px-10 px-5 bg-[#0c1714] text-white'>
+      {Prodabt.map((item: AboutSection) => (
+        <div
+          key={item.no}
+          className='grid grid-cols-1 md:grid-cols-2 gap-10 py-20 bg-[#0c1714] md:sticky top-10'
+        >
+          {/* Title */}
+          <div className='border-t border-gray-400 py-5'>
+            <h2 className='text-2xl font-medium'>{item.title}</h2>
           </div>
 
+          {/* Content */}
+          <div className='border-t border-gray-400 py-5 text-base text-white/60'>
+            <div className='space-y-3'>
+              {item.listitem.map((section, index) => (
+                <div key={index}>
+                  {/* Heading */}
+                  {section.head && (
+                    <h4 className='text-white text-lg font-semibold mb-4'>
+                      {section.head}
+                    </h4>
+                  )}
+
+                  {/* Normal list */}
+                  {section.list && (
+                    <ul className='list-disc pl-5'>
+                      <li>{section.list}</li>
+                    </ul>
+                  )}
+
+                  {/* Nested list */}
+                  {section.items && (
+                    <ul className='list-disc pl-5 space-y-3'>
+                      {section.items.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {/* Table */}
+                  {section.table && (
+                    <div className='mt-6 overflow-x-auto rounded-md'>
+                      <div className='bg-[#353535] text-white text-center py-3 font-semibold'>
+                        {section.table.title}
+                      </div>
+
+                      <table className='w-full border-collapse'>
+                        <thead>
+                          <tr className='bg-[#686767] text-white'>
+                            {section.table.headers.map((header, i) => (
+                              <th key={i} className='px-4 py-3 text-center'>
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr className='bg-[#686767] text-black'>
+                            {section.table.values.map((value, i) => (
+                              <td key={i} className='px-4 py-3 text-center'>
+                                {value}
+                              </td>
+                            ))}
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-)
-
-
+      ))}
+    </div>
+  )
 }
 
 export default Aboutdata
