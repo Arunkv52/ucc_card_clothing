@@ -232,7 +232,7 @@ const Dealers = () => {
 
   return (
     <section>
-      <div className='dealer-container py-20 px-3'>
+      <div className='dealer-container py-20 px-8'>
         <div className='flex flex-col md:flex-row gap-10 relative'>
           {/* LEFT SIDE */}
           <div className='md:w-[30%] w-full'>

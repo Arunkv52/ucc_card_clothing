@@ -4,6 +4,7 @@ import Home from '@/pages/Home'
 import Recommendation from '@/pages/Recommendation'
 import Safety from '@/pages/Safety'
 import Schedule from '@/pages/Schedule'
+import Selleragents from '@/pages/Selleragents'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
 const Navigation = () => {
@@ -18,6 +19,7 @@ const Navigation = () => {
           <Route path='/schedule' element={<Schedule/>} />
           <Route path='/recommendation' element={<Recommendation />} />
           <Route path='/safety' element={<Safety />}/>
+          <Route path='/sellers' element={<Selleragents />}/>
         </Routes>
       </BrowserRouter>
     </>

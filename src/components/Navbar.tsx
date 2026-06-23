@@ -44,7 +44,7 @@ const Navbar = () => {
         }
       ]
     },
-    { title: 'Selling Agents', link: '/selleragents' }
+    { title: 'Selling Agents', link: '/sellers' }
   ]
 
   return (
