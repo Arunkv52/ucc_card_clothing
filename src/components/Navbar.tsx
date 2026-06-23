@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
-
 import Logo from '../assets/logo/Logo.png'
+import { Link } from 'react-router'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -71,12 +71,12 @@ const Navbar = () => {
               {MenuItems.map(item => (
                 <div key={item.title} className='relative group'>
                   {!item.submenu ? (
-                    <a
-                      href={item.link}
+                    <Link
+                      to={item.link}
                       className='px-3 py-2 rounded-md text-base font-medium text-black hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200'
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   ) : (
                     <>
                       {/* Products trigger */}
@@ -91,13 +91,13 @@ const Navbar = () => {
                       {/* Dropdown */}
                       <div className='absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-gray-100 shadow-xl rounded-xl w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top scale-95 group-hover:scale-100 p-1.5 z-50'>
                         {item.submenu.map(sub => (
-                          <a
+                          <Link
                             key={sub.title}
-                            href={sub.link}
+                            to={sub.link}
                             className='flex items-center px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                           >
                             {sub.title}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </>
