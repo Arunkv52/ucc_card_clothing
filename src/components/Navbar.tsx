@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
-import Logo from '@/assets/logo/Logo.png'
+import Logo from '../assets/logo/Logo.png'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
