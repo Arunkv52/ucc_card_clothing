@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { ArrowUpRight } from "lucide-react";
 
-const ORANGE = "#FF6F28";
 const INK = "#0B0B0C";
 
 export default function CommonLinkPage() {

@@ -179,14 +179,14 @@ const productionGroups = [
 ];
 
 // Flatten groups into a single row list so rowSpan-ed cells line up cleanly
-const flatRows = [];
+const flatRows:any = [];
 productionGroups.forEach((group, gi) => {
   group.rows.forEach((row, ri) => {
     flatRows.push({ gi, ri, group, row });
   });
 });
 
-function Gauge({ level }) {
+function Gauge({ level }:any) {
   const heights = [7, 11, 15];
   return (
     <div className="mt-1 flex items-end justify-center gap-[3px]" aria-hidden="true">
@@ -206,7 +206,7 @@ function Gauge({ level }) {
 }
 
 export default function CardClothingGuide() {
-  const [hoverCol, setHoverCol] = useState(null);
+const [hoverCol, setHoverCol] = useState<number | null>(null)
 
   const stickyShadow = "2px 0 5px -2px rgba(43,24,48,0.18)";
 
@@ -377,7 +377,7 @@ export default function CardClothingGuide() {
             </thead>
 
             <tbody>
-              {flatRows.map(({ gi, ri, group, row }) => {
+              {flatRows.map(({ gi, ri, group, row }:any) => {
                 const zebra = gi % 2 === 0 ? "#FFFFFF" : "#FCF4F9";
                 return (
                   <tr key={`${gi}-${ri}`} className="group">
@@ -418,7 +418,7 @@ export default function CardClothingGuide() {
                     >
                       {row.process}
                     </td>
-                    {row.values.map((lines, ci) => (
+                    {row.values.map((lines:any, ci:any) => (
                       <td
                         key={ci}
                         onMouseEnter={() => setHoverCol(ci)}
@@ -433,7 +433,7 @@ export default function CardClothingGuide() {
                         }}
                         className="px-3 py-3 align-top transition-shadow group-hover:bg-pink-50/40"
                       >
-                        {lines.map((l, li) => (
+                        {lines.map((l:any, li:any) => (
                           <div
                             key={li}
                             className="font-mono-data text-[11.5px] leading-snug"

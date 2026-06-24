@@ -65,7 +65,7 @@ export default function ScheduleChart() {
           <div className="relative w-full h-[550px]">
 
             {/* Horizontal Lines */}
-            {data.map((row, index) => (
+            {data.map((_, index) => (
               <div
                 key={index}
                 className="absolute left-[140px] right-0 border-t border-pink-300"
