@@ -37,14 +37,14 @@ const Downloadbrochure = () => {
               </p>
             </div>
             <div className='download-btn'>
-              <ul className='text-white flex justify-between items-center gap-5 cursor-pointer'>
-                 <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-2 cursor-pointer py-2'>
+              <ul className='text-white flex justify-between items-center flex-wrap gap-5 cursor-pointer'>
+                 <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-5 cursor-pointer py-4'>
                   Product Catalogue
                 </li>
-                <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-2 cursor-pointer py-2'>
+                <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-5 cursor-pointer py-4'>
                   Non Woven Metalic Wires
                 </li>
-                <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-2 cursor-pointer py-2'>
+                <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-5 cursor-pointer py-4'>
                   OE Combing Roller Wires
                 </li>                
               </ul>

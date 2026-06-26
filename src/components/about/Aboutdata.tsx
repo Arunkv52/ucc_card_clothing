@@ -206,7 +206,7 @@ const Aboutdata = () => {
                   {/* Table */}
                   {section.table && (
                     <div className='mt-6 overflow-x-auto rounded-md'>
-                      <div className='bg-[#353535] text-white text-center py-3 font-semibold'>
+                      <div className='bg-[#051b0d] text-white text-center py-3 font-semibold'>
                         {section.table.title}
                       </div>
 
@@ -222,7 +222,7 @@ const Aboutdata = () => {
                         </thead>
 
                         <tbody>
-                          <tr className='bg-[#686767] text-black'>
+                          <tr className='bg-[#c1ecd1] text-black'>
                             {section.table.values.map((value, i) => (
                               <td key={i} className='px-4 py-3 text-center'>
                                 {value}

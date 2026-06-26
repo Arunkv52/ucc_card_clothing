@@ -1,4 +1,5 @@
 import About from '@/pages/About'
+import Contact from '@/pages/Contact'
 import Cottonseries from '@/pages/Cottonseries'
 import Home from '@/pages/Home'
 import Recommendation from '@/pages/Recommendation'
@@ -20,6 +21,7 @@ const Navigation = () => {
           <Route path='/recommendation' element={<Recommendation />} />
           <Route path='/safety' element={<Safety />}/>
           <Route path='/sellers' element={<Selleragents />}/>
+          <Route path='/contact' element={<Contact />}/>
         </Routes>
       </BrowserRouter>
     </>
