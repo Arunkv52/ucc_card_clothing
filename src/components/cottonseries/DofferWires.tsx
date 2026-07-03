@@ -27,7 +27,7 @@ const specs: SpecRow[] = [
 export default function DofferWires () {
   return (
     <section className='w-full'>
-      <div className='px-6 py-16 sm:px-20 md:py-20'>
+      <div className='px-6 py-16 md:px-20 md:py-20'>
         {/* Title */}
         <h2 className='text-2xl font-semibold tracking-tight text-[#010101] md:text-3xl'>
           Doffer Wires

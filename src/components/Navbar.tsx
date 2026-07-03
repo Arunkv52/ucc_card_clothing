@@ -7,6 +7,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [productOpen, setProductOpen] = useState(false)
 
+
   const MenuItems = [
     { title: 'Home', link: '/' },
     { title: 'About us', link: '/about' },
@@ -17,9 +18,9 @@ const Navbar = () => {
           title: 'Cotton Series Card Clothing',
           link: '/cotton-series-clothing'
         },
-        { title: 'Metallic Wires', link: '/metallic-wires' },
+        { title: 'Metallic Wires', link: '/metallic-wires'  },
         { title: 'Flat Tops', link: '/flat-tops' },
-        { title: 'Stationary Flat Tops', link: '/stationary-flat-tops' },
+        { title: 'Stationary Flat Tops', link: '/stationary-flat-tops'},
         { title: 'Card Conversion C-System', link: '/card-conversion' },
         { title: 'Fillets & Accessories', link: '/fillets-accessories' },
         { title: 'OE Combing Roller', link: '/oe-combing-roller' },

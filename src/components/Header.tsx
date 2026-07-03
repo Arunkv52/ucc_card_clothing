@@ -27,7 +27,7 @@ const Header = () => {
         </h1>
 
         
-        <div className='md:mt-20 mt-10 md:w-1/2 w-full text-black/85 border-t-2 border-l-2 border-gray-300 p-5 rounded-2xl'>
+        <div className='md:mt-5 mt-10 md:w-10/12 w-full text-black/85 border-t-2 border-l-2 border-gray-300 p-5 rounded-2xl'>
           <h6 className='md:text-base text-base'>
             Meet the emerging Indian brand in card clothing
           </h6>
