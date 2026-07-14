@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Navbar from '../Navbar'
 
 const Herosection = () => {
@@ -10,14 +11,24 @@ const Herosection = () => {
         </div>
         <div className='seller-right'>
           <div className='seller-right-text md:py-0 py-5'>
-            <p>Our Dealer network spans across various <br /> cities in many states of India</p>
+            <p>
+              Our Dealer network spans across various <br /> cities in many
+              states of India
+            </p>
           </div>
           <div className='seller-right-btn flex justify-start items-center gap-5 py-3'>
             <div className='btn-right1'>
-              <button className='border border-gray-300 px-8 py-2 rounded-sm text-sm cursor-pointer'>Connect us</button>
+              <Link
+                to='/contact'
+                className='inline-block border border-gray-300 px-8 py-2 rounded-sm text-sm cursor-pointer'
+              >
+                Connect Us
+              </Link>{' '}
             </div>
             <div className='btn-right1'>
-              <button className='bg-gray-300 px-8 py-2 rounded-sm text-sm cursor-pointer'>Recommendation Chart</button>
+              <button className='bg-gray-300 px-8 py-2 rounded-sm text-sm cursor-pointer'>
+                Recommendation Chart
+              </button>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ const Contactform = () => {
         <div className='grid lg:grid-cols-2 gap-16 items-start'>
           {/* Left Content */}
           <div>
-            <h2 className='text-3xl md:text-4xl font-light text-[#19332C] mb-6'>
+            {/* <h2 className='text-3xl md:text-4xl font-light text-[#19332C] mb-6'>
               Get Started
             </h2>
 
@@ -39,16 +39,18 @@ const Contactform = () => {
               operational consistency. We help spinning mills maximize
               efficiency while maintaining superior yarn quality at every stage
               of production.
-            </p>
+            </p> */}
 
             {/* Accordion */}
             <ContatctAccordion />
 
             {/* Location */}
             <div className='mt-10'>
-              <button className='bg-[#19332C] py-3 px-5 text-white text-sm cursor-pointer'>
-                Land Our Location
-              </button>
+              <a href='https://maps.app.goo.gl/Rpd7B4QHFFkFndtRA'>
+                <button className='bg-[#19332C] py-3 px-5 text-white text-sm cursor-pointer'>
+                  Land Our Location
+                </button>
+              </a>
             </div>
           </div>
 

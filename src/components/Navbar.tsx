@@ -20,12 +20,12 @@ const Navbar = () => {
         },
         { title: 'Metallic Wires', link: '/metallic-wires'  },
         { title: 'Flat Tops', link: '/flat-tops' },
-        { title: 'Stationary Flat Tops', link: '/stationary-flat-tops'},
-        { title: 'Card Conversion C-System', link: '/card-conversion' },
-        { title: 'Fillets & Accessories', link: '/fillets-accessories' },
-        { title: 'OE Combing Roller', link: '/oe-combing-roller' },
-        { title: 'Raising Fillet', link: '/raising-fillet' },
-        { title: 'Nonwoven Metallic Wires', link: '/nonwoven-metallic-wires' }
+        { title: 'Stationary Flat Tops', link: '/stationeryflattops'},
+        { title: 'Card Conversion C-System', link: '/cardconversation' },
+        { title: 'Fillets & Accessories', link: '/fillets' },
+        { title: 'OE Combing Roller', link: '/oecombing' },
+        { title: 'Raising Fillet', link: '/raisingfillets' },
+        { title: 'Nonwoven Metallic Wires', link: '/nonowen' }
       ]
     },
     {
