@@ -1,15 +1,14 @@
-import CommonLinkPage from "@/components/CommonLinkPage"
 import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
 import Dealers from "@/components/sellerslists/DealerList"
-import Herosection from "@/components/sellerslists/Herosection"
 
 const Selleragents = () => {
   return (
     <>
        <main>
-        <Herosection/>
+        <Navbar/>
         <Dealers />
-        <CommonLinkPage />
+        
         <Footer />
        </main>
     </>

@@ -1,10 +1,10 @@
-import FilletsTable from '@/components/filletsaccessories/filletsTable'
+import FilletsItemTable from '@/components/filletsaccessories/FilletsItemTable'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
 
 
-const StationeryFlat = () => {
+const Fillets = () => {
   return (
     <>
       <div>
@@ -14,7 +14,7 @@ const StationeryFlat = () => {
             Fillets & Accessories
           </h4>
         </div>
-        < FilletsTable />
+        < FilletsItemTable />
 
         <Footer />
       </div>
@@ -22,4 +22,4 @@ const StationeryFlat = () => {
   )
 }
 
-export default StationeryFlat
+export default Fillets

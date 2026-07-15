@@ -1,17 +1,16 @@
-import CommonLinkPage from "@/components/CommonLinkPage"
 import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
 import CardClothingManMade from "@/components/recommendation/CardClothingManMade"
 import CardClothingTable from "@/components/recommendation/CardClothingTable"
-import Herosection from "@/components/recommendation/Herosection"
 
 const Recommendation = () => {
   return (
     <>
         <main>
-            <Herosection/>
+            <Navbar />
             <CardClothingTable />
             <CardClothingManMade />
-            <CommonLinkPage />
+            
             <Footer />
         </main>
     

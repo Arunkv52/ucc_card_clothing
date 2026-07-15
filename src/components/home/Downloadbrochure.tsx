@@ -17,11 +17,11 @@ const Downloadbrochure = () => {
   // ]
   return (
     <>
-      <div className='md:flex md:gap-20 md:px-10 md:py-30 py-20 px-3 download-bg relative overflow-hidden '>
+      <div className='md:flex md:flex-col md:gap-20 md:px-10 md:py-30 py-20 px-3 download-bg relative overflow-hidden '>
         {/* Left */}
-        <div className='md:w-1/2 w-full'>
+        <div className=' w-full'>
           <h6 className='md:text-4xl text-2xl font-light text-white leading-tight border-l border-t border-white rounded-2xl md:max-w-fit max-w-fit py-5 px-5'>
-            Precision Card Clothing Engineered for
+            Precision Card Clothing Engineered for <br />
             <span className='text-white font-semibold'>
               {' '}
               Modern Textile Performance
@@ -29,22 +29,22 @@ const Downloadbrochure = () => {
           </h6>
         </div>
         {/* Right */}
-        <div className='md:w-1/2 w-full relative'>
-          <div className='md:absolute right-0 absolute md:top-35 top-80'>
+        <div className=' w-full relative'>
+          <div className='md:absolute left-0 absolute md:top-45 top-80'>
             <div className='py-5'>
-              <p className='text-white md:text-4xl text-3xl leading-8 font-bold'>
+              <p className='text-[#f28b3d] md:text-4xl text-3xl leading-8 font-bold'>
                 Download  Brochure
               </p>
             </div>
             <div className='download-btn'>
               <ul className='text-white flex justify-between items-center flex-wrap gap-5 cursor-pointer'>
-                 <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-5 cursor-pointer py-4'>
+                 <li className='bg-[#21a353] text-white font-bold max-w-fit md:px-4 px-5 cursor-pointer py-4'>
                   Product Catalogue
                 </li>
-                <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-5 cursor-pointer py-4'>
+                <li className='bg-[#21a353] text-white font-bold max-w-fit md:px-4 px-5 cursor-pointer py-4'>
                   Non Woven Metalic Wires
                 </li>
-                <li className='bg-white rounded-2xl text-black max-w-fit md:px-4 px-5 cursor-pointer py-4'>
+                <li className='bg-[#21a353] text-white font-bold max-w-fit md:px-4 px-5 cursor-pointer py-4'>
                   OE Combing Roller Wires
                 </li>                
               </ul>

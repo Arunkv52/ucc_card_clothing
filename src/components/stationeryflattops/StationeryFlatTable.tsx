@@ -148,7 +148,7 @@ const StationeryFlatTable = () => {
                       <img
                         src={item.image}
                         alt={item.type}
-                        className='w-24 object-contain'
+                        className='w-34 object-contain'
                       />
                     </td>
 

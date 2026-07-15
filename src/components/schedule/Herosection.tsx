@@ -1,10 +1,9 @@
 import { Link } from 'react-router'
-import Navbar from '../Navbar'
 
 const Herosection = () => {
   return (
     <>
-      <Navbar />
+      
       <div className='bg-[#f1f1f1] md:py-20 py-30 md:px-8 px-4 md:flex md:flex-row justify-between items-start gap-10'>
         <div className='seller-left'>
           <h2 className='text-4xl md:max-w-1/2  w-full'>

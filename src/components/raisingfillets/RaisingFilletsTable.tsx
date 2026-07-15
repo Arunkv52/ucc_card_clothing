@@ -556,7 +556,7 @@ const columns = [
   { key: 'angles', label: 'Angles' }
 ]
 
-const FilletsDataTable = ({ title, data }) => {
+const FilletsDataTable = ({ title, data }:any) => {
   return (
     <div className='overflow-hidden mt-10'>
       <div className='overflow-x-auto'>
@@ -574,7 +574,7 @@ const FilletsDataTable = ({ title, data }) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, index) => (
+            {data.map((item:any, index:any) => (
               <tr
                 key={index}
                 className={`${

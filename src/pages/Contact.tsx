@@ -1,12 +1,12 @@
 import Contactform from "@/components/contact/Contactform"
-import Herosection from "@/components/contact/Herosection"
 import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
 
 const Contact = () => {
   return (
     <>
         <main>
-            <Herosection/>
+            <Navbar/>
             <Contactform />
             <Footer />
         </main>

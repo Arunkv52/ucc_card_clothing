@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const C = {
-  deep: "#8C2563",
-  mid: "#BD4F8C",
+  deep: "#4a5566",
+  mid: "#4a5566",
   sub: "#E7A8CC",
   tint: "#F6DCEC",
   border: "#E3BBD9",
@@ -212,15 +212,15 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
 
   const headTh = (extra = {}) => ({
     color: "#fff",
-    fontFamily: "'IBM Plex Sans', sans-serif",
+    
     fontWeight: 600,
     letterSpacing: "0.01em",
-    border: `1px solid ${C.border}`,
+   
     ...extra,
   });
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-white to-pink-50 px-3 py-8 sm:px-6">
+    <div className="min-h-screen w-full  px-3 py-8 sm:px-6">
       
 
       <div className="mx-auto max-w-screen-2xl">
@@ -229,7 +229,7 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
          
           <h1
             className="font-display text-2xl font-semibold sm:text-3xl"
-            style={{ color: C.ink }}
+           
           >
             Card Clothing Recommendation Chart - Cotton
           </h1>
@@ -239,7 +239,6 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
         {/* Table card */}
         <div
           className="overflow-x-auto"
-          style={{ border: `1px solid ${C.border}` }}
         >
           <table className="ccg-table w-full" style={{ minWidth: 1180 }}>
             <colgroup>
@@ -256,7 +255,7 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
                 <th
                   rowSpan={3}
                  
-                  className="px-2 py-3 text-center text-[13px] bg-[#c1ecd1]"
+                  className="px-2 py-3 text-center text-base bg-[#4a5566] text-white"
                 >
                   Production
                   <br />
@@ -265,13 +264,13 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
                 <th
                   rowSpan={2}
                  
-                  className="px-2 py-3 text-center text-[13px] "
+                  className="px-2 py-3 text-center text-base "
                 >
                   Process &amp; Count
                 </th>
                 <th
                   rowSpan={2}
-                  className="bg-[#c1ecd1] px-2 py-3 text-center text-[12.5px] leading-snug"
+                  className="bg-[#4a5566] text-white px-2 py-3 text-center text-base leading-snug"
                 >
                   Open end &amp; Ring
                   <br />
@@ -280,20 +279,20 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
                 <th
                   rowSpan={2}
                   
-                  className="px-2 py-3 text-center text-[12.5px] leading-snug"
+                  className="px-2 py-3 text-center text-base leading-snug"
                 >
                   Surgical /<br />
                   Bleached Cotton
                 </th>
                 <th
                   colSpan={2}
-                  className="px-2 py-2 text-center text-[13px] bg-[#c1ecd1]"
+                  className="px-2 py-2 text-center text-base bg-[#4a5566] text-white"
                 >
                   Ring Spinning Medium Count
                 </th>
                 <th
                   colSpan={2}
-                  className="px-2 py-2 text-center text-[13px]"
+                  className="px-2 py-2 text-center text-base"
                 >
                   Ring Spinning Fine Count
                 </th>
@@ -302,26 +301,26 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
               {/* Header row 2 */}
               <tr>
                 <th
-                  style={{ ...headTh(), background: C.sub, color: C.ink }}
-                  className="px-2 py-2 text-center text-[12px]"
+                  
+                  className="bg-[#383838] text-white px-2 py-2 text-center text-base"
                 >
                   20's – 40's
                 </th>
                 <th
-                  style={{ ...headTh(), background: C.sub, color: C.ink }}
-                  className="px-2 py-2 text-center text-[12px]"
+                  
+                  className="bg-[#383838] text-white px-2 py-2 text-center text-base"
                 >
                   30's – 40's (Combed)
                 </th>
                 <th
-                  style={{ ...headTh(), background: C.sub, color: C.ink }}
-                  className="px-2 py-2 text-center text-[12px]"
+                  
+                  className="bg-[#383838] text-white px-2 py-2 text-center text-base"
                 >
                   40's – 60's
                 </th>
                 <th
-                  style={{ ...headTh(), background: C.sub, color: C.ink }}
-                  className="px-2 py-2 text-center text-[12px]"
+                  
+                  className="bg-[#383838] text-white px-2 py-2 text-center text-base"
                 >
                   Above 60's
                 </th>
@@ -330,16 +329,8 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
               {/* Header row 3 — micronaire / staple length */}
               <tr>
                 <th
-                  style={{
-                    ...headTh(),
-                    background: C.tint,
-                    color: C.ink,
-                    position: "sticky",
-                    left: COL1,
-                    zIndex: 30,
-                    boxShadow: stickyShadow,
-                  }}
-                  className="px-2 py-2 text-center text-[11px] font-medium leading-tight"
+                 
+                  className="bg-[#f1f1f1] px-2 py-2 text-center text-sm font-medium leading-tight"
                 >
                   Micronaire
                   <br />
@@ -357,16 +348,8 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
                     key={i}
                     onMouseEnter={() => setHoverCol(i)}
                     onMouseLeave={() => setHoverCol(null)}
-                    style={{
-                      ...headTh(),
-                      background: C.tint,
-                      color: C.ink,
-                      boxShadow:
-                        hoverCol === i
-                          ? `inset 0 0 0 1000px rgba(140,37,99,0.10)`
-                          : undefined,
-                    }}
-                    className="px-2 py-2 text-center text-[11.5px] font-medium leading-tight"
+                    
+                    className="bg-[#f1f1f1] px-2 py-2 text-center text-sm font-medium leading-tight"
                   >
                     {lines.map((l, li) => (
                       <div key={li}>{l}</div>
@@ -394,12 +377,12 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
                         className="px-2 py-3 text-center align-middle"
                       >
                         <div
-                          className="font-display text-[13px] font-semibold leading-tight"
+                          className="font-display text-base font-semibold leading-tight"
                           style={{ color: C.deep }}
                         >
                           {group.rate}
                         </div>
-                        <div className="font-body text-[11px] text-gray-600">
+                        <div className="font-body text-sm text-gray-600">
                           {group.unit}
                         </div>
                         <Gauge level={group.gauge} />
@@ -414,7 +397,7 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
                         zIndex: 20,
                         boxShadow: stickyShadow,
                       }}
-                      className="font-display px-2 py-3 text-center text-[13px] font-medium"
+                      className="font-display px-2 py-3 text-center text-base font-medium"
                     >
                       {row.process}
                     </td>
@@ -436,7 +419,7 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
                         {lines.map((l:any, li:any) => (
                           <div
                             key={li}
-                            className="font-mono-data text-[11.5px] leading-snug"
+                            className="font-mono-data text-sm leading-snug"
                             style={{ color: C.ink }}
                           >
                             {l}

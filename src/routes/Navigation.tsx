@@ -6,6 +6,7 @@ import Fillets from '@/pages/Fillets'
 import Flattops from '@/pages/Flattops'
 import Home from '@/pages/Home'
 import Metalicwires from '@/pages/Metallicwires'
+import MoteKnife from '@/pages/MoteKnife'
 import Nonowen from '@/pages/Nonowen'
 import Oecomibing from '@/pages/Oecomibing'
 import RaisingFillets from '@/pages/RaisingFillets'
@@ -37,6 +38,7 @@ const Navigation = () => {
           <Route path='/fillets' element={<Fillets />} />
           <Route path='/raisingfillets' element={<RaisingFillets />} />
           <Route path='/nonowen' element={<Nonowen />} />
+          <Route path='/moteknife' element={<MoteKnife/>}/>
         </Routes>
       </BrowserRouter>
     </>

@@ -1,6 +1,8 @@
-import StilioImg from '../../assets/products/cotton-series/stilio.jpg'
-import UnoImg from '../../assets/products/cotton-series/uno.jpg'
+import StilioImg from '../../assets/products/cotton-series/prod-stillo.jpeg'
+import UnoImg from '../../assets/products/cotton-series/prod-uno.jpeg'
 import Series1 from '../../assets/products/cotton-series/stilio-logo.png'
+import Uno1 from '../../assets/products/cotton-series/uno.png'
+
 
 const StilloSeries = () => {
   return (
@@ -18,7 +20,7 @@ const StilloSeries = () => {
         </div>
         <div>
           <div className='flex justify-start items-end gap-1'>
-            <img src={Series1} alt='' className='w-20' />
+            <img src={Uno1} alt='' className='w-20' />
             <p className='font-semibold'>SERIES</p> <br />
           </div>
           <div className='mb-5'>

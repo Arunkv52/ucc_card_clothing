@@ -15,7 +15,7 @@ const notes = [
 const PremiumNotes = () => {
   return (
     <>
-      <div className="md:px-50 px-5 py-20">
+      <div className="md:px-50 px-5 py-5">
             <div className="note">
               <h3 className="bg-red-400 px-10 py-2 max-w-fit">Note</h3>
             </div>

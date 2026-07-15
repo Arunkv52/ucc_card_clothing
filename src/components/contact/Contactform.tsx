@@ -24,8 +24,8 @@ const Contactform = () => {
   }
 
   return (
-    <section className='bg-white py-16'>
-      <div className='max-w-7xl mx-auto px-5 md:px-8'>
+    <section className='bg-white py-10'>
+      <div className=' px-5 md:px-15'>
         <div className='grid lg:grid-cols-2 gap-16 items-start'>
           {/* Left Content */}
           <div>
@@ -47,7 +47,7 @@ const Contactform = () => {
             {/* Location */}
             <div className='mt-10'>
               <a href='https://maps.app.goo.gl/Rpd7B4QHFFkFndtRA'>
-                <button className='bg-[#19332C] py-3 px-5 text-white text-sm cursor-pointer'>
+                <button className='bg-[#19332C] py-3 px-8 text-white text-base cursor-pointer'>
                   Land Our Location
                 </button>
               </a>
@@ -190,7 +190,7 @@ const Contactform = () => {
               {/* Submit */}
               <button
                 type='submit'
-                className='bg-green-500 hover:bg-green-600 transition-all text-black font-medium px-8 py-4 rounded-full'
+                className='bg-green-500 hover:bg-green-600 transition-all text-black font-medium px-8 py-4 cursor-pointer'
               >
                 Send Message
               </button>

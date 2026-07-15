@@ -1,3 +1,9 @@
+import Flat1 from '../../assets/products/flat-tops/flat1.png'
+import Flat2 from '../../assets/products/flat-tops/flat2.png'
+import Flat3 from '../../assets/products/flat-tops/flat3.png'
+import Flat4 from '../../assets/products/flat-tops/flat4.png'
+import Flat6 from '../../assets/products/flat-tops/flat6.png'
+
 interface ProductSeries {
   type: string
   logo?: string
@@ -174,6 +180,15 @@ const FlattopsTable = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+        <div className='mt-5'>
+          <div className='md:flex flex justify-between flex-wrap'>
+            <img src={Flat1} alt='' />
+            <img src={Flat2} alt='' />
+            <img src={Flat3} alt='' />
+            <img src={Flat4} alt='' />
+            <img src={Flat6} alt='' />
           </div>
         </div>
       </div>

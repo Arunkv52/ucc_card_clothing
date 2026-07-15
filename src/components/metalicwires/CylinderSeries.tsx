@@ -25,6 +25,9 @@ const CylinderSeries = () => {
                   <strong> UNICARB : </strong> Made from Special High Tenacity
                   CARBON STEELS for medium speed cards.
                 </li>
+                <li className='py-2'>
+                  <strong> STILO : </strong> Made of Special Combination Steel.
+                </li>
               </ul>
             </div>
           </div>

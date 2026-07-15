@@ -1,6 +1,5 @@
 import Aboutdata from '@/components/about/Aboutdata'
 import Herosection from '@/components/about/Herosection'
-import CommonLinkPage from '@/components/CommonLinkPage'
 import Footer from '@/components/Footer'
 
 const About = () => {
@@ -9,7 +8,6 @@ const About = () => {
       <main>
         <Herosection/>
         <Aboutdata/>
-        <CommonLinkPage/>
         <Footer />
       </main>
     </>

@@ -21,7 +21,8 @@ const Navbar = () => {
         { title: 'Metallic Wires', link: '/metallic-wires'  },
         { title: 'Flat Tops', link: '/flat-tops' },
         { title: 'Stationary Flat Tops', link: '/stationeryflattops'},
-        { title: 'Card Conversion C-System', link: '/cardconversation' },
+        { title: 'Extended Stationery Flat System', link: '/cardconversation' },
+        { title: 'Mote Knife', link: '/moteknife' },
         { title: 'Fillets & Accessories', link: '/fillets' },
         { title: 'OE Combing Roller', link: '/oecombing' },
         { title: 'Raising Fillet', link: '/raisingfillets' },
@@ -45,21 +46,22 @@ const Navbar = () => {
         }
       ]
     },
-    { title: 'Selling Agents', link: '/sellers' }
+    { title: 'Selling Agents', link: '/sellers' },
+    { title: 'Contact', link: '/contact' }
   ]
 
   return (
     <>
       {/* Spacer so content doesn't hide behind fixed navbar */}
-      <div className='h-[72px] hidden md:block' />
+      <div className='h-[92px] hidden md:block' />
 
       <nav className='w-full fixed top-0 left-0 z-50 '>
-        <div className='max-w-full mx-auto px-5 md:px-6 lg:px-8'>
+        <div className='max-w-full mx-auto px-5 md:px-8'>
           <div className='flex items-center justify-between h-[72px]'>
             {/* ── Logo ── */}
             <a href='/' className='flex-shrink-0'>
               {Logo ? (
-                <img src={Logo} alt='logo' className='h-15 w-auto' />
+                <img src={Logo} alt='logo' className='h-20 ' />
               ) : (
                 <span className='text-xl font-bold text-[#e67f33] tracking-tight'>
                   BRAND
@@ -74,7 +76,7 @@ const Navbar = () => {
                   {!item.submenu ? (
                     <Link
                       to={item.link}
-                      className='px-3 py-2 rounded-md text-base font-medium text-black hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200'
+                      className='px-3 py-2 rounded-md text-lg font-medium text-black hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200'
                     >
                       {item.title}
                     </Link>

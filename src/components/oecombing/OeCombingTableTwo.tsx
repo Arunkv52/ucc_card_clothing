@@ -29,23 +29,21 @@ const wireRecommendationData: WireRecommendationData = {
     { material: 'Microfibre', wires: ['OB20', 'OK61', 'OB20', 'OB20'] },
     { material: 'Modal - Polynosic', wires: ['OS21', 'OK61', 'OB20', 'OB20'] },
     { material: 'Viscose - Rayon', wires: ['OS21', 'OS21', 'OS21', 'OS21'] },
-    { material: 'Linen - Flax', wires: ['OK74', 'OB20', 'OB20', 'OB20'] }
-  ],
-
-  machineModels: [
-    { models: ['SAVIO', 'BD-200D', 'R1', 'SE7'] },
-    { models: ['BDA10-20', 'BD-D1', 'R20', 'SE8'] },
-    { models: ['BD200ES', 'BD-D1K', 'RU11', 'SE9'] },
-    { models: ['BD200RCF', 'BD-D2', 'RU14', 'SF10'] },
-    { models: ['BN200RN', 'BD-D2K', '', 'SE11'] },
-    { models: ['BT902-905', 'BD-D30', '', ''] },
-    { models: ['FA601A', 'BD-D310', '', ''] },
-    { models: ['F1603', 'BD-D320', '', ''] },
-    { models: ['FA621', 'BD-D321', '', ''] },
-    { models: ['RN', 'BD-D330', '', ''] },
-    { models: ['S', 'BD-D340', '', ''] },
-    { models: ['SN', 'BD-D350', '', ''] },
-    { models: ['', 'BD-SD', '', ''] }
+    { material: 'Linen - Flax', wires: ['OK74', 'OB20', 'OB20', 'OB20'] },
+    { material: '', wires: ['SAVIO', 'BD-200D', 'R1', 'SE7'] },
+    { material: '', wires: ['SAVIO', 'BD-200D', 'R1', 'SE7'] },
+    { material: '', wires: ['BDA10-20', 'BD-D1', 'R20', 'SE8'] },
+    { material: '', wires: ['BD200ES', 'BD-D1K', 'RU11', 'SE9'] },
+    { material: '', wires: ['BD200RCF', 'BD-D2', 'RU14', 'SF10'] },
+    { material: '', wires: ['BN200RN', 'BD-D2K', '', 'SE11'] },
+    { material: '', wires: ['BT902-905', 'BD-D30', '', ''] },
+    { material: '', wires: ['FA601A', 'BD-D310', '', ''] },
+    { material: '', wires: ['F1603', 'BD-D320', '', ''] },
+    { material: '', wires: ['FA621', 'BD-D321', '', ''] },
+    { material: '', wires: ['RN', 'BD-D330', '', ''] },
+    { material: '', wires: ['S', 'BD-D340', '', ''] },
+    { material: '', wires: ['SN', 'BD-D350', '', ''] },
+    { material: '', wires: ['', 'BD-SD', '', ''] }
   ]
 }
 
@@ -87,32 +85,9 @@ const OeCombingTableTwo = () => {
                   ))}
                 </tr>
               ))}
-              <br />
-              <br />
-              {/* Section Header */}
-              <tr className='bg-[#4a5566] text-white'>
-                <td colSpan={5} className='py-4 text-center font-semibold'>
-                  Suitable for Machine Models
-                </td>
-              </tr>
-
-              {/* Machine Models */}
-              {wireRecommendationData.machineModels.map((row, index) => (
-                <tr
-                  key={index}
-                  className={
-                    index % 2 === 0
-                      ? 'bg-[#f5f5f5] text-black'
-                      : 'bg-[#393939] text-white'
-                  }
-                >
-                  {row.models.map((model, i) => (
-                    <td key={i} className='px-5 py-3 text-center'>
-                      {model}
-                    </td>
-                  ))}
-                </tr>
-              ))}
+             
+             
+             
             </tbody>
           </table>
         </div>

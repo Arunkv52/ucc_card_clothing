@@ -172,7 +172,7 @@ const Aboutdata = () => {
         >
           {/* Title */}
           <div className='border-t border-gray-400 py-5'>
-            <h2 className='text-2xl font-medium'>{item.title}</h2>
+            <h2 className='text-2xl font-medium text-[#f28b3d]'>{item.title}</h2>
           </div>
 
           {/* Content */}
@@ -189,14 +189,14 @@ const Aboutdata = () => {
 
                   {/* Normal list */}
                   {section.list && (
-                    <ul className='list-disc pl-5'>
+                    <ul className='list-disc pl-5 text-white'>
                       <li>{section.list}</li>
                     </ul>
                   )}
 
                   {/* Nested list */}
                   {section.items && (
-                    <ul className='list-disc pl-5 space-y-3'>
+                    <ul className='list-disc pl-5 space-y-3 text-white'>
                       {section.items.map((point, i) => (
                         <li key={i}>{point}</li>
                       ))}
@@ -205,14 +205,14 @@ const Aboutdata = () => {
 
                   {/* Table */}
                   {section.table && (
-                    <div className='mt-6 overflow-x-auto rounded-md'>
-                      <div className='bg-[#051b0d] text-white text-center py-3 font-semibold'>
+                    <div className='mt-6 overflow-x-auto'>
+                      <div className='bg-[#4a5566] text-white text-center py-3 font-semibold'>
                         {section.table.title}
                       </div>
 
                       <table className='w-full border-collapse'>
                         <thead>
-                          <tr className='bg-[#686767] text-white'>
+                          <tr className='bg-[#383838] text-white'>
                             {section.table.headers.map((header, i) => (
                               <th key={i} className='px-4 py-3 text-center'>
                                 {header}
@@ -222,7 +222,7 @@ const Aboutdata = () => {
                         </thead>
 
                         <tbody>
-                          <tr className='bg-[#c1ecd1] text-black'>
+                          <tr className='bg-[#f5f5f5] text-black'>
                             {section.table.values.map((value, i) => (
                               <td key={i} className='px-4 py-3 text-center'>
                                 {value}

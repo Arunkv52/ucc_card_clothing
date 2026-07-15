@@ -1,13 +1,14 @@
 import { useState } from 'react'
 
 const C = {
-  deep: '#CF94BB',
-  light: '#E8CCDF',
-  mid: '#D99BC8',
-  border: '#E4C7D9',
-  ink: '#2B1830',
-  rate: ['#FBF2F7', '#F6E1ED', '#EFC4DD'] // pale -> saturated, mirrors gauge level
-}
+  deep: "#4a5566",
+  mid: "#4a5566",
+  sub: "#E7A8CC",
+  tint: "#F6DCEC",
+  border: "#E3BBD9",
+  ink: "#2B1830",
+  rate: ["#FBF3F8", "#F8E6F0", "#F2CEE2"], // pale -> saturated, mirrors gauge level
+};
 
 const COL1 = 92 // px – "Production Rate" sticky column width
 const COL2 = 118 // px – "Process Count & Range" sticky column width
@@ -236,7 +237,7 @@ export default function CardClothingManMade () {
   })
 
   return (
-    <div className='min-h-screen w-full bg-gradient-to-b from-white to-rose-50 px-3 py-8 sm:px-6'>
+    <div className='min-h-screen w-full  px-3 py-8 sm:px-6'>
       <div className='mx-auto max-w-screen-2xl'>
         {/* Title */}
         <div className='mb-6'>
@@ -267,48 +268,46 @@ export default function CardClothingManMade () {
               <tr>
                 <th
                   rowSpan={2}
-                  className='bg-[#c1ecd1] font-display px-2 py-3 text-center text-[13px]'
+                  className='bg-[#4a5566] text-white font-display px-2 py-3 text-center text-base'
                 >
                   Production
                   <br />
                   Rate
                 </th>
-                <th className='px-2 py-3 text-center text-[12.5px] leading-snug'>
+                <th className='px-2 py-3 text-center text-base leading-snug bg-[#f1f1f1]'>
                   Process Count
                   <br />
                   &amp; Range
                 </th>
                 <th
                   colSpan={3}
-                  style={{ ...headTh(), background: C.light, color: C.ink }}
-                  className='px-2 py-3 text-center text-[13px]'
+                  
+                  className='px-2 py-3 text-center text-base'
                 >
                   100% Polyester
                 </th>
                 <th
                   rowSpan={2}
-                  className='bg-[#c1ecd1] px-2 py-3 text-center text-[12.5px] leading-snug'
+                  className='bg-[#4a5566] text-white px-2 py-3 text-center text-base leading-snug'
                 >
                   100%
                   <br />
                   Viscose
                 </th>
                 <th
-                  style={{ ...headTh(), background: C.light, color: C.ink }}
-                  className='px-2 py-2 text-center text-[12px] leading-snug'
+                  className='text-base px-2 py-2 text-center  leading-snug'
                 >
                   Polyester Viscose
                   <br />
                   (Grey / Dyed)
                 </th>
-                <th className=' bg-[#c1ecd1] px-2 py-2 text-center text-[12px] leading-snug'>
+                <th className=' bg-[#4a5566] text-white px-2 py-2 text-center text-base leading-snug'>
                   PC Blends more
                   <br />
                   Polyester Content
                 </th>
                 <th
-                  style={{ ...headTh(), background: C.light, color: C.ink }}
-                  className='px-2 py-2 text-center text-[12px] leading-snug'
+                  className='text-base px-2 py-2 text-center  leading-snug'
                 >
                   PC Blends more
                   <br />
@@ -316,7 +315,7 @@ export default function CardClothingManMade () {
                 </th>
                 <th
                   rowSpan={2}
-                  className='bg-[#c1ecd1] px-2 py-3 text-center text-[12.5px] leading-snug'
+                  className='bg-[#4a5566] text-white px-2 py-3 text-center text-base leading-snug'
                 >
                   Regenerated
                   <br />
@@ -327,16 +326,8 @@ export default function CardClothingManMade () {
               {/* Header row 2 — denier / dtex */}
               <tr>
                 <th
-                  style={{
-                    ...headTh(),
-                    background: C.mid,
-                    color: C.ink,
-                    position: 'sticky',
-                    left: COL1,
-                    zIndex: 30,
-                    boxShadow: stickyShadow
-                  }}
-                  className='px-2 py-2 text-center text-[11.5px] font-medium'
+                 
+                  className='bg-[#f1f1f1] px-2 py-2 text-center text-sm font-medium'
                 >
                   Denier
                 </th>
@@ -355,16 +346,8 @@ export default function CardClothingManMade () {
                       key={i}
                       onMouseEnter={() => setHoverCol(i)}
                       onMouseLeave={() => setHoverCol(null)}
-                      style={{
-                        ...headTh(),
-                        background: C.mid,
-                        color: C.ink,
-                        boxShadow:
-                          hoverCol === i
-                            ? `inset 0 0 0 1000px rgba(140,37,99,0.10)`
-                            : undefined
-                      }}
-                      className='px-2 py-2 text-center text-[11.5px] font-medium leading-tight'
+                     
+                      className='px-2 py-2 text-center text-sm font-medium leading-tight bg-[#f1f1f1]'
                     >
                       {lines.map((l, li) => (
                         <div key={li}>{l}</div>
@@ -393,7 +376,7 @@ export default function CardClothingManMade () {
                         className='px-2 py-3 text-center align-middle'
                       >
                         <div
-                          className='font-display text-[13px] font-semibold leading-tight'
+                          className='font-display text-base font-semibold leading-tight'
                           style={{ color: C.deep }}
                         >
                           {group.rate}
@@ -413,7 +396,7 @@ export default function CardClothingManMade () {
                         zIndex: 20,
                         boxShadow: stickyShadow
                       }}
-                      className='font-display px-2 py-3 text-center text-[13px] font-medium'
+                      className='font-display px-2 py-3 text-center text-base font-medium'
                     >
                       {row.process}
                     </td>
@@ -435,7 +418,7 @@ export default function CardClothingManMade () {
                         {lines.map((l: any, li: any) => (
                           <div
                             key={li}
-                            className='font-mono-data text-[11.5px] leading-snug'
+                            className='font-mono-data text-sm leading-snug'
                             style={{ color: C.ink }}
                           >
                             {l}

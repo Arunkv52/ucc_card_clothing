@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import CylinderImg from "../../assets/products/cotton-series/doffer-banner.jpg";
+import CylinderImg from "../../assets/products/cotton-series/Banner-4-new.jpg";
 
 // All the row content lives in one place, so adding/removing/editing a spec
 // is a one-line change instead of copy-pasting a whole <Row /> block.
@@ -10,7 +10,7 @@ type SpecRow = {
 
 const specs: SpecRow[] = [
   { label: "Cylinder wires available in", value: "860 ppsi & 960 ppsi" },
-  { label: "Metallurgy", value: "Unistar, Unichrome & Unicarb" },
+  { label: "Metallurgy", value: "Unistar, Unichrome, Unicarb & Stillo" },
   {
     label: "Specifications",
     value: (
@@ -48,10 +48,7 @@ export default function CylinderWires() {
 
           {/* Spec table */}
           <div>
-            <div className="grid grid-cols-2 gap-3">
-              <HeaderCell>Metric</HeaderCell>
-              <HeaderCell>Value</HeaderCell>
-            </div>
+            
 
             <div className="mt-6 divide-y divide-white/[0.08] border border-white/[0.08]">
               {specs.map((row) => (
@@ -79,13 +76,13 @@ function HeaderCell({ children }: { children: ReactNode }) {
 
 function Row({ label, value }: { label: string; value: ReactNode }) {
   return (
-    <div className="grid grid-cols-2 gap-3">
-      <div className="flex items-center bg-[#16181c] px-5 py-6">
-        <span className="text-[15px] text-[#b3b7bf] sm:text-base">
+    <div className="grid grid-cols-2 gap-1">
+      <div className="flex items-center bg-[#383838] px-5 py-6">
+        <span className="text-[15px] text-[#ffffff] sm:text-base">
           {label}
         </span>
       </div>
-      <div className="flex items-center bg-[#ff671c] px-5 py-6">
+      <div className="flex items-center bg-[#d8d8d8] px-5 py-6">
         <span className="text-[15px] font-medium text-[#0a0a0a] sm:text-base">
           {value}
         </span>

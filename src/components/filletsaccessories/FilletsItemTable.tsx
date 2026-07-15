@@ -19,7 +19,7 @@ import ReiterC70 from './ReiterC70'
 import StandardFillets from './StandardFillets'
 import HandCard from './HandCard'
 
-const FilletsTable = () => {
+const FilletsItemTable = () => {
   return (
     <>
       <div className='grid grid-cols-2 gap-10 py-20 px-18'>
@@ -155,4 +155,4 @@ const FilletsTable = () => {
   )
 }
 
-export default FilletsTable
+export default FilletsItemTable

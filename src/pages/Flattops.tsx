@@ -1,11 +1,8 @@
 import FlattopsTable from '@/components/flattops/FlattopsTable'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import Flat1 from '../assets/products/flat-tops/flat1.png'
-import Flat2 from '../assets/products/flat-tops/flat2.png'
-import Flat3 from '../assets/products/flat-tops/flat3.png'
-import Flat4 from '../assets/products/flat-tops/flat4.png'
-import Flat6 from '../assets/products/flat-tops/flat6.png'
+import Flat1 from '../assets/products/flat-tops/flat-top-stilo-550.jpeg'
+
 
 
 
@@ -45,13 +42,7 @@ const Flattops = () => {
             </div>
           </div>
           <div>
-            <div className="grid grid-cols-3 gap-10">
-                <img src={Flat1} alt="" />
-                <img src={Flat2} alt="" />
-                <img src={Flat3} alt="" />
-                <img src={Flat4} alt="" />
-                <img src={Flat6} alt="" />
-            </div>
+            <img src={Flat1} alt="" />
           </div>
         </div>
         <FlattopsTable/>

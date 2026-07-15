@@ -5,7 +5,7 @@ const Abtproduct = () => {
         <div className='top-abt pb-10 md:flex flex md:flex-row flex-col md:justify-between gap-5'>
           <div className="md:w-[60%] w-full">
             <h1 className='md:text-3xl text-4xl font-bold'>
-             <span className="text-black/50"> Welcome to</span>  Unispin Card Clothing India Pvt. Ltd.,
+             <span className="text-[#f28b3d]"> Welcome to</span>  Unispin Card Clothing India Pvt. Ltd.,
             </h1>
           </div>
           <div className="md:w-[40%] w-full">
