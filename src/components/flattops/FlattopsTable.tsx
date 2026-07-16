@@ -99,7 +99,7 @@ const productSeries: ProductSeries[] = [
 const FlattopsTable = () => {
   return (
     <section className='bg-white'>
-      <div className=' px-20 pb-20'>
+      <div className='md:px-20 px-5 pb-20'>
         <div className='overflow-hidden  border border-gray-200 shadow-lg mt-10'>
           <div className='overflow-x-auto'>
             <table className='w-full border-collapse'>
@@ -183,7 +183,7 @@ const FlattopsTable = () => {
           </div>
         </div>
         <div className='mt-5'>
-          <div className='md:flex flex justify-between flex-wrap'>
+          <div className='md:flex flex md:justify-between justify-around md:gap-0 gap-10 flex-wrap'>
             <img src={Flat1} alt='' />
             <img src={Flat2} alt='' />
             <img src={Flat3} alt='' />

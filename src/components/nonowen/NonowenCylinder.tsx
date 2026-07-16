@@ -172,7 +172,7 @@ const data = [
 export default function NonowenCylinder () {
   return (
     <section className='py-12 bg-white'>
-      <div className=' px-15'>
+      <div className='md:px-15 px-5'>
         <h4 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
           Non Woven Cylinder
         </h4>

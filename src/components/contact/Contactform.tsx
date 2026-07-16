@@ -24,7 +24,7 @@ const Contactform = () => {
   }
 
   return (
-    <section className='bg-white py-10'>
+    <section className='bg-white py-10 md:mt-0 mt-20'>
       <div className=' px-5 md:px-15'>
         <div className='grid lg:grid-cols-2 gap-16 items-start'>
           {/* Left Content */}

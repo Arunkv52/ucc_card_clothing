@@ -220,12 +220,12 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
   });
 
   return (
-    <div className="min-h-screen w-full  px-3 py-8 sm:px-6">
+    <div className="min-h-screen w-full px-3 py-8 sm:px-6">
       
 
       <div className="mx-auto max-w-screen-2xl">
         {/* Title */}
-        <div className="mb-6">
+        <div className="md:mb-6 mb-5 mt-20 md:px-0 px-2">
          
           <h1
             className="font-display text-2xl font-semibold sm:text-3xl"
@@ -238,7 +238,7 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
 
         {/* Table card */}
         <div
-          className="overflow-x-auto"
+          className="overflow-x-auto md:px-0 px-2"
         >
           <table className="ccg-table w-full" style={{ minWidth: 1180 }}>
             <colgroup>

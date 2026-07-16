@@ -155,7 +155,7 @@ export default function ProductShowcase () {
   const currentTab = tabs.find(tab => tab.id === activeTab)
 
   return (
-    <section className='bg-white py-12'>
+    <section className='bg-white py-12 md:mt-0 mt-15'>
         
       <div className='px-5'>
         <div className='grid gap-4 xl:grid-cols-[1fr_1.35fr]'>

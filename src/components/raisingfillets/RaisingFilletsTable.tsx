@@ -560,7 +560,7 @@ const FilletsDataTable = ({ title, data }:any) => {
   return (
     <div className='overflow-hidden mt-10'>
       <div className='overflow-x-auto'>
-        <h4 className='bg-gray-600 my-5 px-10 py-2 text-white text-2xl'>
+        <h4 className='bg-gray-600 md:my-5 my-2 md:px-10 px-5 py-2 text-white text-2xl'>
           {title}
         </h4>
         <table className='w-full border-collapse'>
@@ -600,7 +600,7 @@ const FilletsDataTable = ({ title, data }:any) => {
 const RaisingFilletsTable = () => {
   return (
     <section className='bg-white'>
-      <div className='px-15'>
+      <div className='md:px-15 px-5'>
         {fabricSections.map(section => (
           <FilletsDataTable
             key={section.title}

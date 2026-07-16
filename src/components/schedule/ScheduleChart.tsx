@@ -1,4 +1,3 @@
-
 /* ---------- Colors (sampled from source chart) ---------- */
 const ORANGE = "#F39018";
 const GREEN = "#A0D010";
@@ -36,7 +35,6 @@ const DASHED_BLACK = 350;
 const DASHED_ORANGE = 650;
 const DASHED_RED = 800;
 
-
 /* ---------- Top annotation labels (above the Unistar Cylinder row) ---------- */
 type TopLabel = { ton: number; lines: { text: string; color: string; bold?: boolean }[] };
 const TOP_LABELS: TopLabel[] = [
@@ -57,7 +55,7 @@ const TOP_LABELS: TopLabel[] = [
       { text: "Wire", color: INK },
     ],
   },
-   {
+  {
     ton: 800,
     lines: [
       { text: "Recloth", color: INK },
@@ -96,7 +94,7 @@ const CYLINDER_MARKERS: Marker[] = [
   { ton: 450, kind: "blue" },
   { ton: 600, kind: "blue" },
   { ton: 650, kind: "green" },
-   { ton: 800, kind: "green" },
+  { ton: 800, kind: "green" },
   { ton: 900, kind: "blue" },
   { ton: 1200, kind: "blue" },
 ];
@@ -107,7 +105,6 @@ const DOFFER_MARKERS: Marker[] = [
   { ton: 450, kind: "green", below: "Resharp" },
   { ton: 600, kind: "green", below: "Resharp" },
   { ton: 750, kind: "green", below: "Resharp" },
-  
   { ton: 900, kind: "green", below: "Resharp" },
   { ton: 1050, kind: "green", below: "Resharp" },
   { ton: 1200, kind: "blue" },
@@ -155,257 +152,274 @@ const Dot: React.FC<{ x: number; y: number }> = ({ x, y }) => (
 const ScheduleChart: React.FC = () => {
   const width = 1250;
   const height = 430;
+  // Minimum pixel width the chart is allowed to render at.
+  // Below this, text becomes unreadable, so we scroll horizontally instead of shrinking further.
+  const MIN_CHART_WIDTH = 900;
 
   return (
-    <div className="w-full overflow-x-auto bg-white px-15">
-      <svg
-        viewBox={`0 0 ${width} ${height}`}
-        className="w-full h-auto"
-        
+    <div className="w-full bg-white px-4 py-6 md:px-10 md:py-10 md:mt-0 mt-20">
+      {/* Mobile scroll hint - only shows on small screens */}
+      <div className="mb-2 flex items-center gap-1 text-xs text-gray-400 md:hidden">
+        <span>Swipe to see full chart</span>
+        <span aria-hidden="true">→</span>
+      </div>
+
+      <div
+        className="w-full overflow-x-auto"
+        style={{ WebkitOverflowScrolling: "touch" }}
       >
-        {/* ---------- Full height grid lines (every 150 tons) ---------- */}
-        {GRID_TONS.map((ton) => (
-          <line
-            key={`grid-${ton}`}
-            x1={tonToX(ton)}
-            x2={tonToX(ton)}
-            y1={TOP_Y + 46}
-            y2={AXIS_Y}
-            stroke={ORANGE}
-            strokeWidth={2.5}
-          />
-        ))}
+        <div style={{ minWidth: MIN_CHART_WIDTH }}>
+          <svg
+            viewBox={`0 0 ${width} ${height}`}
+            width="100%"
+            height="auto"
+            style={{ display: "block" }}
+          >
+            {/* ---------- Full height grid lines (every 150 tons) ---------- */}
+            {GRID_TONS.map((ton) => (
+              <line
+                key={`grid-${ton}`}
+                x1={tonToX(ton)}
+                x2={tonToX(ton)}
+                y1={TOP_Y + 46}
+                y2={AXIS_Y}
+                stroke={ORANGE}
+                strokeWidth={2.5}
+              />
+            ))}
 
-        {/* ---------- Dashed special lines ---------- */}
-        <line
-          x1={tonToX(DASHED_BLACK)}
-          x2={tonToX(DASHED_BLACK)}
-          y1={TOP_Y + 46}
-          y2={AXIS_Y}
-          stroke={INK}
-          strokeWidth={2}
-          strokeDasharray="6 5"
-        />
-        <line
-          x1={tonToX(DASHED_ORANGE)}
-          x2={tonToX(DASHED_ORANGE)}
-          y1={TOP_Y + 46}
-          y2={AXIS_Y}
-          stroke={ORANGE}
-          strokeWidth={2.5}
-          strokeDasharray="6 5"
-        />
-
-        {/* ---------- Top annotation text (above Unistar Cylinder row) ---------- */}
-        {TOP_LABELS.map((tl) => {
-          const x = tonToX(tl.ton);
-          return (
-            <text
-              key={`toplabel-${tl.ton}`}
-              x={x}
-              y={TOP_Y}
-              textAnchor="middle"
-              fontSize={13}
-            >
-              {tl.lines.map((ln, i) => (
-                <tspan
-                  key={i}
-                  x={x}
-                  dy={i === 0 ? 0 : 15}
-                  fill={ln.color}
-                  fontWeight={ln.bold ? 700 : 400}
-                >
-                  {ln.text}
-                </tspan>
-              ))}
-            </text>
-          );
-        })}
-
-        {/* ---------- Row label text (left side) ---------- */}
-        <text x={4} y={ROW_Y.cylinder + 10} fontSize={14} fill={INK}>
-          Unistar Cylinder
-        </text>
-        <text x={4} y={ROW_Y.doffer + 10} fontSize={14} fill={INK}>
-          Unistar Doffer
-        </text>
-        <text x={4} y={ROW_Y.flatTops + 10} fontSize={14} fill={INK}>
-          Flat Tops
-        </text>
-        <text x={4} y={ROW_Y.sfTops + 8} fontSize={14} fill={INK}>
-          <tspan x={4} dy={0}>S.F Tops</tspan>
-          <tspan x={4} dy={17}>POS&amp;SFD</tspan>
-        </text>
-        <text x={4} y={ROW_Y.lickerin + 8} fontSize={14} fill={INK}>
-          <tspan x={4} dy={0}>UniStar Lickerin &amp; S.F top</tspan>
-          <tspan x={4} dy={17}>(SFL side)</tspan>
-        </text>
-
-        {/* ---------- Row baselines ---------- */}
-        {Object.values(ROW_Y).map((y, i) => (
-          <line
-            key={`rowline-${i}`}
-            x1={tonToX(TON_MIN)}
-            x2={tonToX(TON_MAX)}
-            y1={y}
-            y2={y}
-            stroke="#FDCB6E"
-            strokeWidth={2.5}
-          />
-        ))}
-
-        {/* ---------- Bottom axis baseline ---------- */}
-        <line
-          x1={tonToX(TON_MIN)}
-          x2={tonToX(TON_MAX)}
-          y1={AXIS_Y}
-          y2={AXIS_Y}
-          stroke={ORANGE}
-          strokeWidth={2}
-        />
-
-        {/* ---------- Axis ticks + rotated numbers ---------- */}
-        {TICKS.map((t) => (
-          <g key={`tick-${t}`}>
+            {/* ---------- Dashed special lines ---------- */}
             <line
-              x1={tonToX(t)}
-              x2={tonToX(t)}
-              y1={AXIS_Y}
-              y2={AXIS_Y + 14}
+              x1={tonToX(DASHED_BLACK)}
+              x2={tonToX(DASHED_BLACK)}
+              y1={TOP_Y + 46}
+              y2={AXIS_Y}
+              stroke={INK}
+              strokeWidth={2}
+              strokeDasharray="6 5"
+            />
+            <line
+              x1={tonToX(DASHED_ORANGE)}
+              x2={tonToX(DASHED_ORANGE)}
+              y1={TOP_Y + 46}
+              y2={AXIS_Y}
               stroke={ORANGE}
               strokeWidth={2.5}
+              strokeDasharray="6 5"
             />
-            <text
-              x={tonToX(t) - 6}
-              y={AXIS_Y + 20}
-              fontSize={12}
-              fill={INK}
-              textAnchor="end"
-              transform={`rotate(-90 ${tonToX(t) - 6} ${AXIS_Y + 20})`}
-            >
-              {t}
+
+            {/* ---------- Top annotation text (above Unistar Cylinder row) ---------- */}
+            {TOP_LABELS.map((tl) => {
+              const x = tonToX(tl.ton);
+              return (
+                <text
+                  key={`toplabel-${tl.ton}`}
+                  x={x}
+                  y={TOP_Y}
+                  textAnchor="middle"
+                  fontSize={13}
+                >
+                  {tl.lines.map((ln, i) => (
+                    <tspan
+                      key={i}
+                      x={x}
+                      dy={i === 0 ? 0 : 15}
+                      fill={ln.color}
+                      fontWeight={ln.bold ? 700 : 400}
+                    >
+                      {ln.text}
+                    </tspan>
+                  ))}
+                </text>
+              );
+            })}
+
+            {/* ---------- Row label text (left side) ---------- */}
+            <text x={4} y={ROW_Y.cylinder + 10} fontSize={14} fill={INK}>
+              Unistar Cylinder
             </text>
-          </g>
-        ))}
-        <text
-          x={tonToX(TON_MAX) + 24}
-          y={AXIS_Y + 20}
-          fontSize={13}
-          fill={INK}
-          fontWeight={700}
-          textAnchor="end"
-          transform={`rotate(-90 ${tonToX(TON_MAX) + 24} ${AXIS_Y + 20})`}
-        >
-          TONS
-        </text>
+            <text x={4} y={ROW_Y.doffer + 10} fontSize={14} fill={INK}>
+              Unistar Doffer
+            </text>
+            <text x={4} y={ROW_Y.flatTops + 10} fontSize={14} fill={INK}>
+              Flat Tops
+            </text>
+            <text x={4} y={ROW_Y.sfTops + 8} fontSize={14} fill={INK}>
+              <tspan x={4} dy={0}>S.F Tops</tspan>
+              <tspan x={4} dy={17}>POS&amp;SFD</tspan>
+            </text>
+            <text x={4} y={ROW_Y.lickerin + 8} fontSize={14} fill={INK}>
+              <tspan x={4} dy={0}>UniStar Lickerin &amp; S.F top</tspan>
+              <tspan x={4} dy={17}>(SFL side)</tspan>
+            </text>
 
-        {/* ---------- Markers: Unistar Cylinder ---------- */}
-        {CYLINDER_MARKERS.map((m) =>
-          m.kind === "green" ? (
-            <Diamond key={`cyl-${m.ton}`} x={tonToX(m.ton)} y={ROW_Y.cylinder} />
-          ) : (
-            <Dot key={`cyl-${m.ton}`} x={tonToX(m.ton)} y={ROW_Y.cylinder} />
-          )
-        )}
+            {/* ---------- Row baselines ---------- */}
+            {Object.values(ROW_Y).map((y, i) => (
+              <line
+                key={`rowline-${i}`}
+                x1={tonToX(TON_MIN)}
+                x2={tonToX(TON_MAX)}
+                y1={y}
+                y2={y}
+                stroke="#FDCB6E"
+                strokeWidth={2.5}
+              />
+            ))}
 
-        {/* ---------- Markers + labels: Unistar Doffer ---------- */}
-        {DOFFER_MARKERS.map((m) => (
-          <g key={`dof-${m.ton}`}>
-            {m.kind === "green" ? (
-              <Diamond x={tonToX(m.ton)} y={ROW_Y.doffer} />
-            ) : (
-              <Dot x={tonToX(m.ton)} y={ROW_Y.doffer} />
-            )}
-            {m.below && (
-              <text
-                x={tonToX(m.ton)}
-                y={ROW_Y.doffer - 8}
-                fontSize={13}
-                fill={INK}
-                textAnchor="middle"
-              >
-                {m.below}
-              </text>
-            )}
-          </g>
-        ))}
+            {/* ---------- Bottom axis baseline ---------- */}
+            <line
+              x1={tonToX(TON_MIN)}
+              x2={tonToX(TON_MAX)}
+              y1={AXIS_Y}
+              y2={AXIS_Y}
+              stroke={ORANGE}
+              strokeWidth={2}
+            />
 
-        {/* ---------- Markers + labels: Flat Tops ---------- */}
-        {FLATTOPS_MARKERS.map((m) => (
-          <g key={`ft-${m.ton}`}>
-            {m.kind === "green" ? (
-              <Diamond x={tonToX(m.ton)} y={ROW_Y.flatTops} />
-            ) : (
-              <Dot x={tonToX(m.ton)} y={ROW_Y.flatTops} />
-            )}
-            {m.below && (
-              <text
-                x={tonToX(m.ton)}
-                y={ROW_Y.flatTops - 8}
-                fontSize={13}
-                fill={INK}
-                textAnchor="middle"
-              >
-                {m.below}
-              </text>
-            )}
-            {m.above && (
-              <text
-                x={tonToX(m.ton)}
-                y={ROW_Y.flatTops - 8}
-                fontSize={13}
-                fill={INK}
-                textAnchor="middle"
-              >
-                {m.above}
-              </text>
-            )}
-          </g>
-        ))}
-
-        {/* ---------- Markers + labels: S.F Tops POS&SFD ---------- */}
-        {SFTOPS_MARKERS.map((m) => (
-          <g key={`sft-${m.ton}`}>
-            <Dot x={tonToX(m.ton)} y={ROW_Y.sfTops} />
-            {m.above && (
-              <text
-                x={tonToX(m.ton)}
-                y={ROW_Y.sfTops - 8}
-                fontSize={13}
-                fill={INK}
-                textAnchor="middle"
-              >
-                {m.above}
-              </text>
-            )}
-          </g>
-        ))}
-
-        {/* ---------- Markers + labels: UniStar Lickerin & S.F top ---------- */}
-        {LICKERIN_MARKERS.map((m) => (
-          <g key={`lick-${m.ton}`}>
-            <Dot x={tonToX(m.ton)} y={ROW_Y.lickerin} />
+            {/* ---------- Axis ticks + rotated numbers ---------- */}
+            {TICKS.map((t) => (
+              <g key={`tick-${t}`}>
+                <line
+                  x1={tonToX(t)}
+                  x2={tonToX(t)}
+                  y1={AXIS_Y}
+                  y2={AXIS_Y + 14}
+                  stroke={ORANGE}
+                  strokeWidth={2.5}
+                />
+                <text
+                  x={tonToX(t) - 6}
+                  y={AXIS_Y + 20}
+                  fontSize={12}
+                  fill={INK}
+                  textAnchor="end"
+                  transform={`rotate(-90 ${tonToX(t) - 6} ${AXIS_Y + 20})`}
+                >
+                  {t}
+                </text>
+              </g>
+            ))}
             <text
-              x={tonToX(m.ton)}
-              y={ROW_Y.lickerin - 8}
+              x={tonToX(TON_MAX) + 24}
+              y={AXIS_Y + 20}
               fontSize={13}
               fill={INK}
-              textAnchor="middle"
+              fontWeight={700}
+              textAnchor="end"
+              transform={`rotate(-90 ${tonToX(TON_MAX) + 24} ${AXIS_Y + 20})`}
             >
-              {m.above}
+              TONS
             </text>
-            <text
-              x={tonToX(m.ton)}
-              y={ROW_Y.lickerin + 18}
-              fontSize={11}
-              fill={INK}
-              textAnchor="middle"
-            >
-              {m.below}
-            </text>
-          </g>
-        ))}
-      </svg>
+
+            {/* ---------- Markers: Unistar Cylinder ---------- */}
+            {CYLINDER_MARKERS.map((m) =>
+              m.kind === "green" ? (
+                <Diamond key={`cyl-${m.ton}`} x={tonToX(m.ton)} y={ROW_Y.cylinder} />
+              ) : (
+                <Dot key={`cyl-${m.ton}`} x={tonToX(m.ton)} y={ROW_Y.cylinder} />
+              )
+            )}
+
+            {/* ---------- Markers + labels: Unistar Doffer ---------- */}
+            {DOFFER_MARKERS.map((m) => (
+              <g key={`dof-${m.ton}`}>
+                {m.kind === "green" ? (
+                  <Diamond x={tonToX(m.ton)} y={ROW_Y.doffer} />
+                ) : (
+                  <Dot x={tonToX(m.ton)} y={ROW_Y.doffer} />
+                )}
+                {m.below && (
+                  <text
+                    x={tonToX(m.ton)}
+                    y={ROW_Y.doffer - 8}
+                    fontSize={13}
+                    fill={INK}
+                    textAnchor="middle"
+                  >
+                    {m.below}
+                  </text>
+                )}
+              </g>
+            ))}
+
+            {/* ---------- Markers + labels: Flat Tops ---------- */}
+            {FLATTOPS_MARKERS.map((m) => (
+              <g key={`ft-${m.ton}`}>
+                {m.kind === "green" ? (
+                  <Diamond x={tonToX(m.ton)} y={ROW_Y.flatTops} />
+                ) : (
+                  <Dot x={tonToX(m.ton)} y={ROW_Y.flatTops} />
+                )}
+                {m.below && (
+                  <text
+                    x={tonToX(m.ton)}
+                    y={ROW_Y.flatTops - 8}
+                    fontSize={13}
+                    fill={INK}
+                    textAnchor="middle"
+                  >
+                    {m.below}
+                  </text>
+                )}
+                {m.above && (
+                  <text
+                    x={tonToX(m.ton)}
+                    y={ROW_Y.flatTops - 8}
+                    fontSize={13}
+                    fill={INK}
+                    textAnchor="middle"
+                  >
+                    {m.above}
+                  </text>
+                )}
+              </g>
+            ))}
+
+            {/* ---------- Markers + labels: S.F Tops POS&SFD ---------- */}
+            {SFTOPS_MARKERS.map((m) => (
+              <g key={`sft-${m.ton}`}>
+                <Dot x={tonToX(m.ton)} y={ROW_Y.sfTops} />
+                {m.above && (
+                  <text
+                    x={tonToX(m.ton)}
+                    y={ROW_Y.sfTops - 8}
+                    fontSize={13}
+                    fill={INK}
+                    textAnchor="middle"
+                  >
+                    {m.above}
+                  </text>
+                )}
+              </g>
+            ))}
+
+            {/* ---------- Markers + labels: UniStar Lickerin & S.F top ---------- */}
+            {LICKERIN_MARKERS.map((m) => (
+              <g key={`lick-${m.ton}`}>
+                <Dot x={tonToX(m.ton)} y={ROW_Y.lickerin} />
+                <text
+                  x={tonToX(m.ton)}
+                  y={ROW_Y.lickerin - 8}
+                  fontSize={13}
+                  fill={INK}
+                  textAnchor="middle"
+                >
+                  {m.above}
+                </text>
+                <text
+                  x={tonToX(m.ton)}
+                  y={ROW_Y.lickerin + 18}
+                  fontSize={11}
+                  fill={INK}
+                  textAnchor="middle"
+                >
+                  {m.below}
+                </text>
+              </g>
+            ))}
+          </svg>
+        </div>
+      </div>
     </div>
   );
 };

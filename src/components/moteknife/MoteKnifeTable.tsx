@@ -42,7 +42,7 @@ const Star: React.FC = () => (
 
 const MoteKnifeTable: React.FC = () => {
   return (
-    <div className='w-full overflow-x-auto px-15'>
+    <div className='w-full overflow-x-auto md:px-15 px-5'>
       <table className='min-w-full border-separate border-spacing-0 overflow-hidden shadow-sm'>
         <thead>
           <tr>

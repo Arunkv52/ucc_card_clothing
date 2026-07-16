@@ -1,11 +1,11 @@
 const Features = () => {
   return (
     <>
-      <div className='features md:px-20'>
+      <div className='features md:px-20 px-6'>
         <div>
           <h6 className='bg-[#16181c] text-white py-4 px-2 font-bold text-md max-w-fit'>Features of Cylinder & Doffer wires</h6>
         </div>
-        <div className="w-2xl py-2">
+        <div className="md:w-2xl w-full py-2">
           <p className="text-base font-semibold leading-6 text-[#000000] md:mt-3">
             Special tooth profile. Fibres continuously pushed toward tip for
             carding action between cylinder and flat tops. Strong cylinder wire

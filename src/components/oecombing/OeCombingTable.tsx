@@ -105,7 +105,7 @@ const tableData: TableData[] = [
 const OeCombingTable = () => {
   return (
     <section className='bg-white py-10'>
-      <div className='px-15 md:px-15'>
+      <div className='px-5 md:px-15'>
         <div className='overflow-hidden border border-gray-200 shadow-md'>
           <div className='overflow-x-auto'>
             <table className='min-w-full border-collapse'>

@@ -6,7 +6,7 @@ import Img1 from '../../assets/products/metalic-wires/cylinder/grooved.jpg'
 const DofferWires = () => {
   return (
     <>
-      <div className='grid grid-cols-2 gap-10 py-30 px-18'>
+      <div className='md:grid md:grid-cols-2 md:gap-10 md:py-10 py-10 md:px-18 px-5'>
         <div>
           <div>
             <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
@@ -18,7 +18,7 @@ const DofferWires = () => {
 
         <div>
           <div>
-            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
+            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md md:mt-0 mt-10'>
               Interlocking Licker-in Wires
             </h6>
           </div>
@@ -26,7 +26,7 @@ const DofferWires = () => {
         </div>
         <div>
           <div>
-            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
+            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md md:mt-0 mt-10'>
               Grooved Licker-in Wires
             </h6>
           </div>

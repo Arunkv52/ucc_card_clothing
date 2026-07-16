@@ -69,8 +69,8 @@ const tableData: TableData[] = [
 
 const InterlockingTable = () => {
   return (
-    <section className="bg-white">
-      <div className=" px-0">
+    <section className="bg-white ">
+      <div className=" px-0 md:py-5 py-0">
 
         <div className="overflow-hidden  border border-gray-200 shadow-lg mt-10">
           <div className="overflow-x-auto">

@@ -30,9 +30,9 @@ const Downloadbrochure = () => {
         </div>
         {/* Right */}
         <div className=' w-full relative'>
-          <div className='md:absolute left-0 absolute md:top-45 top-80'>
+          <div className='md:absolute left-0 absolute md:top-45 top-90'>
             <div className='py-5'>
-              <p className='text-[#f28b3d] md:text-4xl text-3xl leading-8 font-bold'>
+              <p className='md:text-[#f28b3d] text-white md:text-4xl text-4xl leading-8 font-bold'>
                 Download  Brochure
               </p>
             </div>

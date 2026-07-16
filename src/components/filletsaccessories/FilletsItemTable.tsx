@@ -22,7 +22,7 @@ import HandCard from './HandCard'
 const FilletsItemTable = () => {
   return (
     <>
-      <div className='grid grid-cols-2 gap-10 py-20 px-18'>
+      <div className='md:grid grid md:grid-cols-2 grid-cols-1 gap-10 py-10 md:px-18 px-5'>
         <div>
           <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
             LMW LC 636 (1.5 Meter Card)

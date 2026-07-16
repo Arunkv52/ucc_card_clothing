@@ -4,7 +4,7 @@ import CylinderWireTable from './CylinderwireTable'
 const CylinderSeries = () => {
   return (
     <>
-      <div className='grid grid-cols-2 gap-10 py-10 px-18'>
+      <div className='md:grid md:grid-cols-2 md:gap-10 md:py-10 py-10 md:px-18 px-5'>
         <div>
           
           <div>

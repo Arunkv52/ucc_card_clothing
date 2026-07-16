@@ -86,7 +86,7 @@ const Navbar = () => {
                       <button className='flex items-center gap-1 px-3 py-2 rounded-md text-base font-medium text-black hover:text-[#e67f33] hover:bg-red-50 transition-all duration-200 cursor-pointer'>
                         {item.title}
                         <ChevronDown
-                          size={14}
+                          size={18}
                           className='mt-0.5 transition-transform duration-300 group-hover:rotate-180'
                         />
                       </button>
@@ -97,7 +97,7 @@ const Navbar = () => {
                           <Link
                             key={sub.title}
                             to={sub.link}
-                            className='flex items-center px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
+                            className='flex items-center px-3 py-2.5 rounded-lg text-base text-gray-600 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                           >
                             {sub.title}
                           </Link>
@@ -133,7 +133,7 @@ const Navbar = () => {
                   <Link
                     to={item.link}
                     onClick={() => setMobileMenu(false)}
-                    className='flex items-center px-3 py-3 rounded-lg text-sm font-medium text-gray-700 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
+                    className='flex items-center px-3 py-3 rounded-lg text-lg font-medium text-gray-700 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                   >
                     {item.title}
                   </Link>
@@ -141,7 +141,7 @@ const Navbar = () => {
                   <div>
                     <button
                       onClick={() => setProductOpen(!productOpen)}
-                      className='w-full flex items-center justify-between px-3 py-3 rounded-lg text-sm font-medium text-gray-700 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
+                      className='w-full flex items-center justify-between px-3 py-3 rounded-lg text-lg font-medium text-gray-700 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                     >
                       <span>{item.title}</span>
                       <ChevronDown
@@ -164,7 +164,7 @@ const Navbar = () => {
                             key={sub.title}
                             to={sub.link}
                             onClick={() => setMobileMenu(false)}
-                            className='px-3 py-2.5 rounded-lg text-sm text-gray-500 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
+                            className='px-3 py-2.5 rounded-lg text-lg text-gray-500 hover:text-[#e67f33] hover:bg-red-50 transition-all duration-150'
                           >
                             {sub.title}
                           </Link>
@@ -176,16 +176,7 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* Mobile CTA */}
-            <div className='pt-2 pb-1 border-t border-gray-100 mt-1'>
-              <Link
-               to='/contact'
-                onClick={() => setMobileMenu(false)}
-                className='flex items-center justify-center w-full px-4 py-3 bg-red-600 text-white text-sm font-semibold rounded-xl hover:bg-red-700 active:scale-95 transition-all duration-200'
-              >
-                Get Started
-              </Link>
-            </div>
+           
           </div>
         </div>
       </nav>

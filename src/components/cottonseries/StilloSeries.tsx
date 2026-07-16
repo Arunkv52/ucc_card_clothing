@@ -7,7 +7,7 @@ import Uno1 from '../../assets/products/cotton-series/uno.png'
 const StilloSeries = () => {
   return (
     <>
-      <div className='grid grid-cols-3 gap-10 py-30 px-20'>
+      <div className='md:grid md:grid-cols-3 md:gap-10 grid grid-cols-1 gap-10 md:py-30 py-10 md:px-20 px-6'>
         <div>
           <div className='flex justify-start items-end gap-1'>
             <img src={Series1} alt='' className='w-20' />

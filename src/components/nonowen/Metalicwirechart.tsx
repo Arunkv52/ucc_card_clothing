@@ -138,7 +138,7 @@ const tableData = [
 const Metalicwirechart = () => {
   return (
     <section className='bg-white py-10'>
-      <div className='px-15'>
+      <div className='md:px-15 px-5'>
         <div className='overflow-x-auto border border-gray-200'>
           <table className='w-full border-collapse'>
             {/* Header */}
@@ -208,7 +208,7 @@ const Metalicwirechart = () => {
           </table>
         </div>
       </div>
-      <div className='grid grid-cols-2 px-15 mt-5'>
+      <div className='md:grid md:grid-cols-2 grid grid-cols-1 md:px-15 px-10 md:mt-5 mt-10'>
         <div>
           <h4 className='bg-red-300 text-lg max-w-fit px-5 py-2 mb-5'>
             Suitable for Process Table

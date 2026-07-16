@@ -9,7 +9,7 @@ const Metalicwires = () => {
     <>
         <div>
             <Navbar />
-            <div className="px-8 mt-5 ">
+            <div className="md:px-8 px-5 md:mt-5 mt-30">
               <h4 className="bg-gray-600 py-5 px-10 text-white text-2xl">Metalic Wires</h4>
             </div>
 

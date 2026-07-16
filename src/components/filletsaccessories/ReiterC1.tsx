@@ -27,7 +27,7 @@ const tableData = [
 const ReiterC1 = () => {
   return (
     <section className="">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="md:max-w-7xl w-full mx-auto md:px-4 px-0">
         <div className="overflow-x-auto shadow-lg">
           <table className="min-w-full border-collapse">
             {/* Header */}

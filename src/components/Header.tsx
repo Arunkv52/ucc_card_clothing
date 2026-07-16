@@ -21,8 +21,8 @@ const Header = () => {
       <Navbar />
 
       {/* Content */}
-      <div className='relative top-20 z-10'>
-        <h1 className='md:text-7xl text-6xl text-[#020012] font-semibold text-center'>
+      <div className='md:relative md:top-20 relative top-150 z-10'>
+        <h1 className='md:text-7xl text-5xl text-[#020012] font-semibold text-center'>
           Reliable Carding Solutions
         </h1>
 

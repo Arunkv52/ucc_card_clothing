@@ -14,13 +14,13 @@ const Nonowen = () => {
     <>
       <div>
         <Navbar />
-        <div className='px-8 mt-5 '>
+        <div className='md:px-8 px-5 md:mt-5 mt-30'>
           <h4 className='bg-gray-600 py-5 px-10 text-white text-2xl'>
             Nonwoven Metalic Wires
           </h4>
         </div>
 
-        <div className='grid grid-cols-2 gap-10 py-10 px-18'>
+        <div className='md:grid grid md:grid-cols-2 grid-cols-1 gap-10 py-10 md:px-18 px-10'>
           <div>
             <div className='py-4'>
               <p className='text-2xl'>
@@ -37,7 +37,7 @@ const Nonowen = () => {
         </div>
         <Metalicwirechart />
 
-        <div className='grid grid-cols-2'>
+        <div className='md:grid md:grid-cols-2 grid grid-cols-1'>
           <div>
             <NonowenCylinder />
           </div>

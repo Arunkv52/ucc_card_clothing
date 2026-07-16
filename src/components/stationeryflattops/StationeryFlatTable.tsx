@@ -118,7 +118,7 @@ const lickerinData: LickerinData[] = [
 const StationeryFlatTable = () => {
   return (
     <section className='bg-white'>
-      <div className=' px-15 pb-20'>
+      <div className='md:px-15 px-5 pb-20'>
         <div className='overflow-hidden  mt-10'>
           <div className='overflow-x-auto'>
             <table className='min-w-full border-collapse'>
@@ -144,11 +144,11 @@ const StationeryFlatTable = () => {
                   >
                     <td className='p-4 font-bold'>{item.type}</td>
 
-                    <td className='p-4'>
+                    <td className='md:p-4 p-0'>
                       <img
                         src={item.image}
                         alt={item.type}
-                        className='w-34 object-contain'
+                        className='md:w-34 w-full md:object-contain'
                       />
                     </td>
 

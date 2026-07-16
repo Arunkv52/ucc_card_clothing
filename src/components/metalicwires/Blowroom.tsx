@@ -7,10 +7,10 @@ import Img3 from '../../assets/products/metalic-wires/cylinder/Product-banner-im
 const Blowroom = () => {
   return (
     <>
-      <div className='grid grid-cols-2 gap-10 py-30 px-18'>
+      <div className='md:grid md:grid-cols-2 md:gap-10 md:py-10 py-10 md:px-18 px-5'>
         <div>
           <div>
-            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
+            <h6 className='bg-[#ff681c] md:py-4 py-4 px-2 font-bold text-md md:mt-0 mt-10'>
               Blowroom Beater Wires TRUTZSCHLER & TRUMAC
             </h6>
           </div>
@@ -19,7 +19,7 @@ const Blowroom = () => {
 
         <div>
           <div>
-            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
+            <h6 className='bg-[#ff681c] md:py-4 py-4 px-2 font-bold text-md md:mt-0 mt-10'>
               Blowroom Beater Wires RIETER & LMW
             </h6>
           </div>
@@ -28,7 +28,7 @@ const Blowroom = () => {
 
         <div>
           <div>
-            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
+            <h6 className='bg-[#ff681c] md:py-4 py-4 px-2 font-bold text-md md:mt-0 mt-10'>
               Border Wires
             </h6>
           </div>
@@ -37,7 +37,7 @@ const Blowroom = () => {
 
         <div>
           <div>
-            <h6 className='bg-[#ff681c] py-4 px-2 font-bold text-md'>
+            <h6 className='bg-[#ff681c] md:py-4 py-4 px-2 font-bold text-md md:mt-0 mt-10'>
               Stripper Roller & Feed Roller & Chute Beater Wires
             </h6>
           </div>
