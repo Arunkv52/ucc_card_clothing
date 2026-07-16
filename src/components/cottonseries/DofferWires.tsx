@@ -59,17 +59,7 @@ export default function DofferWires () {
   )
 }
 
-function HeaderCell ({ children }: { children: ReactNode }) {
-  return (
-    <div className='relative'>
-      <span className='absolute -top-1 left-0 h-px w-2 bg-neutral-500/70' />
-      <div className='bg-[#0e0f11] px-5 py-3'>
-        <span className='font-mono text-sm text-[#b3b7bf]'>{children}</span>
-      </div>
-      <span className='absolute -bottom-1 right-0 h-px w-2 bg-neutral-500/70' />
-    </div>
-  )
-}
+
 
 function Row ({ label, value }: { label: string; value: ReactNode }) {
   return (

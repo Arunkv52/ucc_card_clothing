@@ -3,13 +3,11 @@ interface MaterialData {
   wires: string[]
 }
 
-interface MachineModelData {
-  models: string[]
-}
+
 
 interface WireRecommendationData {
   materials: MaterialData[]
-  machineModels: MachineModelData[]
+  
 }
 
 const wireRecommendationData: WireRecommendationData = {

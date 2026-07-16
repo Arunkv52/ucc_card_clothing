@@ -210,14 +210,7 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
 
   const stickyShadow = "2px 0 5px -2px rgba(43,24,48,0.18)";
 
-  const headTh = (extra = {}) => ({
-    color: "#fff",
-    
-    fontWeight: 600,
-    letterSpacing: "0.01em",
-   
-    ...extra,
-  });
+
 
   return (
     <div className="min-h-screen w-full px-3 py-8 sm:px-6">
@@ -225,7 +218,7 @@ const [hoverCol, setHoverCol] = useState<number | null>(null)
 
       <div className="mx-auto max-w-screen-2xl">
         {/* Title */}
-        <div className="md:mb-6 mb-5 mt-20 md:px-0 px-2">
+        <div className="md:mb-6 mb-5 md:mt-5 mt-20 md:px-0 px-2">
          
           <h1
             className="font-display text-2xl font-semibold sm:text-3xl"

@@ -228,13 +228,7 @@ export default function CardClothingManMade () {
   const [hoverCol, setHoverCol] = useState<number | null>(null)
   const stickyShadow = '2px 0 5px -2px rgba(43,24,48,0.18)'
 
-  const headTh = (extra = {}) => ({
-    color: '#fff',
-    fontWeight: 600,
-    letterSpacing: '0.01em',
-    border: `1px solid ${C.border}`,
-    ...extra
-  })
+
 
   return (
     <div className='min-h-screen w-full  px-3 py-8 sm:px-6'>

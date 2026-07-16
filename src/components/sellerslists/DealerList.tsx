@@ -216,7 +216,6 @@ const getInitials = (title: string): string => {
 const cleanTitle = (title: string): string =>
   title.replace(/^M\/s\.?\s*/i, '').trim()
 
-const monoFont = { fontFamily: "'IBM Plex Mono', monospace" }
 
 interface ContactRowProps {
   icon: LucideIcon

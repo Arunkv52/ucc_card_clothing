@@ -33,7 +33,7 @@ const GRID_TONS = [150, 300, 450, 600, 750, 900, 1050, 1200];
 /* ---------- Special dashed lines ---------- */
 const DASHED_BLACK = 350;
 const DASHED_ORANGE = 650;
-const DASHED_RED = 800;
+
 
 /* ---------- Top annotation labels (above the Unistar Cylinder row) ---------- */
 type TopLabel = { ton: number; lines: { text: string; color: string; bold?: boolean }[] };
